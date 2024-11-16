@@ -1,0 +1,92 @@
+/* Container for the login form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+}
+
+/* Login form styling */
+.login-form {
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust alpha for transparency */
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Form header */
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333333;
+}
+
+/* Input fields */
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/* Submit button */
+.login-form button[type="submit"],
+.login-form button[type="button"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button[type="submit"]:hover,
+.login-form button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+/* Additional links (e.g., forgot password) */
+.login-form .links {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.login-form .links a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.login-form .links a:hover {
+  text-decoration: underline;
+}
+
+/* Forgot password link */
+.login-form .forgot-password {
+  font-size: 0.8rem;
+  color: #007bff;
+  text-align: center;
+  display: block;
+  margin-top: 1rem;
+}
+
+.login-form .forgot-password:hover {
+  text-decoration: underline;
+}
+.login-form .register-link {
+  color: red; /* Change the color of the register link to red */
+}
+

@@ -1,0 +1,173 @@
+.complaintsPage {
+  padding: 20px;
+  background: url('https://w0.peakpx.com/wallpaper/648/370/HD-wallpaper-welcome-autumn-digital-art-background-fall-autumn-leaves-leaf.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.complaintsCard {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.complaintsCard:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 40px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.cardHeader h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.complaintsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.complaintItem {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fafafa;
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.complaintItem:hover {
+  background: #e9ecef;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.complaintImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.complaintText {
+  flex: 1;
+  font-size: 1.1em;
+  margin-right: 20px;
+}
+
+.complaintStatus {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.statusCheckbox {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.deleteButton {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.deleteButton:hover {
+  background: #c82333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.noComplaintsText {
+  text-align: center;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.emoji {
+  font-size: 24px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.backButton, .hideButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.backButton {
+  background: #007bff;
+  color: #fff;
+}
+
+.backButton:hover {
+  background: #0056b3;
+}
+
+.hideButton {
+  background: #6c757d;
+  color: #fff;
+}
+
+.hideButton:hover {
+  background: #5a6268;
+}
+.backToDashboardButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  float: right; 
+}

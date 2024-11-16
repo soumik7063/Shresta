@@ -1,0 +1,130 @@
+.store-image-text-firebase {
+  background-image: url('./pic3.avif');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Ensures it covers the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.store-image-text-firebase .container {
+  background-color: rgba(24, 101, 233, 0.7); /* Black box with transparency */
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px; /* Adjust the max width as needed */
+  color: rgb(19, 1, 1); /* Ensure text is readable */
+}
+
+.store-image-text-firebase .form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.store-image-text-firebase .form-group label {
+  margin-right: 10px;
+  min-width: 80px; /* Adjust label width for alignment */
+}
+
+.store-image-text-firebase .form-group input,
+.store-image-text-firebase .form-group .textarea {
+  flex: 1;
+}
+
+.store-image-text-firebase .form-group input {
+  width: calc(30% - 20px); /* Adjust width calculation to be narrower */
+  height: 30px; /* Adjust height */
+  padding: 4px; /* Adjust padding */
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Adjust border radius */
+  font-size: 14px; /* Adjust font size */
+}
+
+.store-image-text-firebase .textarea {
+  width: calc(100% - 20px); /* Increase width calculation */
+  height: 150px; /* Increase height */
+  padding: 12px; /* Increase padding for better readability */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none; /* Prevent resizing */
+  font-size: 16px; /* Adjust font size */
+  line-height: 1.6; /* Adjust line height for readability */
+}
+
+.store-image-text-firebase .add-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #eaecee;
+  color: rgb(12, 4, 4);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.store-image-text-firebase .add-button:hover {
+  background-color: #0056b3;
+}
+/* hello.css */
+.container {
+  position: relative; /* Ensure the container has relative positioning */
+  width: 100%;
+  max-width: 600px; /* Adjust max-width as needed */
+  margin: 0 auto;
+}
+
+.textarea-container {
+  position: relative; /* Relative positioning for the container of the textarea and buttons */
+}
+
+.textarea {
+  width: 100%;
+  height: 150px; /* Adjust height as needed */
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: none; /* Disable resizing */
+}
+
+.speech-buttons {
+  position: absolute;
+  bottom: 10px; /* Distance from the bottom */
+  right: 10px; /* Distance from the right */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+}
+
+.speech-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Adjust space between textarea and buttons */
+}
+
+.speech-button {
+  background-color: #fff; /* Button background color */
+  border: 1px solid #ddd; /* Button border */
+  border-radius: 50%; /* Circular buttons */
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px; /* Adjust icon size */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow for better visibility */
+  margin: 0 5px; /* Space between buttons */
+}
+
+.speech-button:disabled {
+  opacity: 0.5; /* Reduce opacity when disabled */
+  cursor: not-allowed;
+}
+
+.speech-button.mic {
+  color: green; /* Color for the microphone button */
+}
+
+.speech-button.stop {
+  color: red; /* Color for the stop button */
+}
