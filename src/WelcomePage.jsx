@@ -4,8 +4,10 @@ import firebase from './firebase'; // Import firebase initialization
 import background from './p5.jpg';
 import { useNavigate } from 'react-router-dom';
 import GetCurrentAddress from './GetCurrentAddress'; // Import GetCurrentAddress
+import { toast, ToastContainer } from 'react-toastify'; // Import toastify
+import 'react-toastify/dist/ReactToastify.css'; // Import toastify styles
 
-const WelcomePage = () => {
+const WelcomeComponent = () => {
   const [wardNo, setWardNo] = useState('');
   const [selectedLocation, setSelectedLocation] = useState('');
   const [pincode, setPincode] = useState('');
@@ -13,7 +15,7 @@ const WelcomePage = () => {
   const [address, setAddress] = useState('');
   const [phonenumber, setPhonenumber] = useState('');
   const [fetchingAddress, setFetchingAddress] = useState(false);
-
+  const [isNotARobot, setIsNotARobot] = useState(false);
   const navigate = useNavigate();
 
   const handleWardNoChange = (e) => setWardNo(e.target.value);
@@ -23,30 +25,38 @@ const WelcomePage = () => {
   const handleStateChange = (e) => setState(e.target.value);
   const handleAddressChange = (e) => setAddress(e.target.value);
 
+  const handleCheckboxChange = () => {
+    setIsNotARobot(!isNotARobot);
+  };
+
   const handleNextClick = () => {
-    if (wardNo && selectedLocation && pincode && state && address && phonenumber) {
+    if (wardNo && selectedLocation && pincode && state && address && phonenumber && isNotARobot) {
       const phoneNumber = "+91" + phonenumber;
-      const appVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
-        'size': 'invisible',
-        'callback': (response) => {
-          console.log("Recaptcha verified");
+
+      const recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+        size: 'invisible', // or 'normal'
+        callback: (response) => {
+          // Handle successful recaptcha verification
         },
-        'expired-callback': () => {
-          console.log("Recaptcha expired");
-        }
       });
 
-      firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
-        .then((confirmationResult) => {
-          localStorage.setItem('verificationId', confirmationResult.verificationId);
-          console.log("OTP has been sent");
-          navigate('/Pass1'); // Navigate to StoreImageTextFirebase component
+      recaptchaVerifier.render()
+        .then(() => {
+          firebase.auth().signInWithPhoneNumber(phoneNumber, recaptchaVerifier)
+            .then((confirmationResult) => {
+              localStorage.setItem('verificationId', confirmationResult.verificationId);
+              console.log("OTP has been sent");
+              navigate('/Pass1'); // Navigate to next page
+            })
+            .catch((error) => {
+              console.log("Error sending OTP:", error);
+            });
         })
         .catch((error) => {
-          console.log("Error sending OTP:", error);
+          console.log("Error rendering Recaptcha:", error);
         });
     } else {
-      alert("Please fill in all fields.");
+      toast.error("Please fill in all fields and verify you're not a robot.");
     }
   };
 
@@ -70,13 +80,14 @@ const WelcomePage = () => {
     <div className="welcome-page">
       <div className="background-image" style={{ backgroundImage: `url(${background})` }}></div>
       <div className="content-box">
+        <ToastContainer />
         <h1>Welcome to Shreshta</h1>
-        
+
         <div className="ward-selection">
           <label htmlFor="wardNo">Select Ward No (Optional):</label>
           <input type="text" id="wardNo" value={wardNo} onChange={handleWardNoChange} />
         </div>
-        
+
         <div className="location-selection">
           <label htmlFor="location">Select Location:</label>
           <select id="location" value={selectedLocation} onChange={handleLocationChange}>
@@ -88,17 +99,17 @@ const WelcomePage = () => {
             <option value="konthiwada">Konthiwada</option>
           </select>
         </div>
-        
+
         <div className="pincode">
           <label htmlFor="pincode">Pincode:</label>
           <input type="text" id="pincode" value={pincode} onChange={handlePincodeChange} />
         </div>
-        
+
         <div className="phonenumber">
           <label htmlFor="phonenumber">Phone Number:</label>
           <input type="text" id="phonenumber" value={phonenumber} onChange={handlePhonenumberChange} />
         </div>
-        
+
         <div className="address">
           <label htmlFor="address">Address:</label>
           <div className="address-input">
@@ -107,7 +118,7 @@ const WelcomePage = () => {
             {fetchingAddress && <GetCurrentAddress onAddressFetched={handleAddressFetched} />}
           </div>
         </div>
-        
+
         <div className="state-selection">
           <label htmlFor="state">Select State:</label>
           <select id="state" value={state} onChange={handleStateChange}>
@@ -117,11 +128,19 @@ const WelcomePage = () => {
             ))}
           </select>
         </div>
-        
+
+        <div className="not-a-robot">
+          <label>
+            <input type="checkbox" checked={isNotARobot} onChange={handleCheckboxChange} />
+            I am not a robot
+          </label>
+        </div>
+
         <button onClick={handleNextClick} className="blue-button">Next</button>
-        <div id="sign-in-button"></div> {/* RecaptchaVerifier container */}
+        <div id="recaptcha-container"></div> {/* RecaptchaVerifier container */}
       </div>
     </div>
   );
 };
-export default WelcomePage;
+
+export default WelcomeComponent;
