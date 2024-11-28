@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import firebase from './firebase'; // Import firebase initialization
 import './login.css';
 import { useNavigate } from 'react-router-dom';
 import background from './otp1.jpg';
@@ -14,33 +13,19 @@ const Pass1 = () => {
   };
 
   const handleSubmit = () => {
-    // Retrieve verification ID from local storage
-    const verificationId = localStorage.getItem('verificationId');
-    if (!verificationId) {
-      console.log("Verification ID not found.");
-      setError('An error occurred. Please try again.');
-      return;
+    const storedOtp = localStorage.getItem('otp'); // Retrieve stored OTP for comparison
+    if (otp === storedOtp) {
+      console.log('OTP verification successful');
+      navigate('/StoreImageTextFirebase'); // Redirect to the next page
+    } else {
+      setError('Incorrect OTP. Please try again.');
     }
-
-    // Confirm the OTP
-    const credential = firebase.auth.PhoneAuthProvider.credential(
-      verificationId,
-      otp
-    );
-
-    firebase.auth().signInWithCredential(credential)
-      .then(() => {
-        console.log("OTP verification successful");
-        navigate('/StoreImageTextFirebase'); // Navigate to Setpass.jsx
-      })
-      .catch((error) => {
-        console.log("Error verifying OTP:", error);
-        setError('Incorrect OTP. Please try again.');
-      });
   };
 
   return (
-    <div className="login-container" style={{ backgroundImage: `url(${background})` }} 
+    <div
+      className="login-container"
+      style={{ backgroundImage: `url(${background})` }}
     >
       <form className="login-form">
         <h2>Enter OTP</h2>
@@ -52,11 +37,7 @@ const Pass1 = () => {
           className="input-field"
           required
         />
-        <button
-          type="button"
-          onClick={handleSubmit}
-          className="submit-button"
-        >
+        <button type="button" onClick={handleSubmit} className="submit-button">
           Submit
         </button>
         {error && <p className="error-message">{error}</p>}
