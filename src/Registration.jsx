@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import './regi.css';
-import { db2 } from './firebaseRegistrationConfig'; // Ensure the correct import
+import { db2 } from './firebaseRegistrationConfig';
 import { addDoc, collection, where, query, getDocs } from 'firebase/firestore';
-import { toast, ToastContainer } from 'react-toastify'; // Import ToastContainer and toast
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
-import background from './register.jpg';
 
 const Registration = () => {
   const navigate = useNavigate();
@@ -53,7 +52,7 @@ const Registration = () => {
         });
         setTimeout(() => {
           navigate('/login');
-        }, 3000); // Delay navigation by 5 seconds (5000 milliseconds)
+        }, 3000);
       }
     } catch (error) {
       toast.error('Registration Failed', {
@@ -75,116 +74,136 @@ const Registration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Check if password and confirm password match
-    if (password !== confirmPassword) {
-      toast.error('Passwords do not match', {
+    
+    // Simple email validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+      toast.error('Please enter a valid email address!', {
         position: 'top-center'
       });
-      return; // Prevent form submission if passwords do not match
+      return;
     }
-    signup(); // Call signup function here
+
+    if (password !== confirmPassword) {
+      toast.error('Passwords do not match!', {
+        position: 'top-center'
+      });
+    } else {
+      signup();
+    }
   };
 
   return (
-    <div className="registration-container" style={{ backgroundImage: `url(${background})` }}>
-      <div className="form-wrapper">
-        <form className="registration-form" onSubmit={handleSubmit}>
-          <h2>Registration Form</h2>
-          <input
-            type="text"
-            placeholder="Full Name"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-            required
-          />
-          <input
-            type="text"
-            placeholder="First Name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-          <select
-            value={gender}
-            onChange={(e) => setGender(e.target.value)}
-            required
-          >
-            <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-          <select
-            value={state}
-            onChange={(e) => setState(e.target.value)}
-            required
-          >
-            <option value="">Select State</option>
-            {statesList.map((state, index) => (
-              <option key={index} value={state}>{state}</option>
-            ))}
-          </select>
-          <input
-            type="text"
-            placeholder="Phone Number"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            required
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Adhar Number"
-            value={adhar}
-            onChange={(e) => setAdhar(e.target.value)}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Country"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
-          <button type="submit">Register</button>
-          <p>Already have an account? <span onClick={handleLogin} className="login-link">Login</span></p>
-        </form>
+    <div className="registration-container">
+      <div className="container-with-image">
+        <div className="image-side"></div>
+        <div className="form-side">
+          <div className="form-wrapper">
+            <form className="registration-form" onSubmit={handleSubmit}>
+              <h2>Register</h2>
+              <input
+                type="text"
+                placeholder="Full Name"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                required
+              />
+              <input
+                type="text"
+                placeholder="First Name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+              <select
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
+                required
+              >
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+              <select
+                value={state}
+                onChange={(e) => setState(e.target.value)}
+                required
+              >
+                <option value="">Select State</option>
+                {statesList.map((stateOption, index) => (
+                  <option key={index} value={stateOption}>
+                    {stateOption}
+                  </option>
+                ))}
+              </select>
+              <input
+                type="text"
+                placeholder="Phone Number"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Adhar Number"
+                value={adhar}
+                onChange={(e) => setAdhar(e.target.value)}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Country"
+                value={country}
+                onChange={(e) => setCountry(e.target.value)}
+                required
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required
+              />
+              <button type="submit">Register</button>
+              <p>
+                Already have an account?{' '}
+                <span className="login-link" onClick={handleLogin}>
+                  Login
+                </span>
+              </p>
+            </form>
+          </div>
+        </div>
       </div>
-      <ToastContainer /> {/* Add ToastContainer to render toast notifications */}
+      <ToastContainer />
     </div>
   );
 };

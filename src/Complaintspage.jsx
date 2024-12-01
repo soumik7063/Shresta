@@ -40,7 +40,6 @@ function ComplaintsPage() {
   const sendSms = async (phoneNumber, message) => {
     try {
       const formattedNumber = formatPhoneNumber(phoneNumber);
-
       const response = await fetch('https://shresta-1.onrender.com/send-sms', {
         method: 'POST',
         headers: {

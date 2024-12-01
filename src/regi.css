@@ -1,26 +1,66 @@
-/* regi.css */
-
-/* Import Google Fonts for stylish text */
+/* General styling for the registration page */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  background-image: url('https://media.istockphoto.com/id/1434782845/vector/purple-light-defocused-blurred-motion-gradient-abstract-background-vector.jpg?s=612x612&w=0&k=20&c=XdziynSGjaoVCLk9LI1A70ibGgpUi2IZ23PtkOWdjOM=');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
 
 .registration-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('./register.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-color: #f5f5f5;
   min-height: 100vh;
-  padding: 1rem;
+  padding: 2rem;
+}
+
+.container-with-image {
+  display: flex;
+  flex-wrap: wrap; /* Allow the items to wrap when needed */
+  border: 3px solid #000; /* Black border around the container */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevent content from spilling over the rounded corners */
+  max-width: 1200px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.image-side {
+  flex: 1;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/003/689/228/non_2x/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg');
+  background-size: cover;
+  background-position: -105% center; /* Move the image slightly to the left */
+  min-height: 300px; /* Enforce a minimum height */
+}
+
+.form-side {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .form-wrapper {
-  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  padding: 2rem;
-  max-width: 450px;
-  width: 100%;
-  backdrop-filter: blur(8px); /* Slight blur effect for a modern look */
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 .registration-form h2 {
@@ -32,20 +72,17 @@
   margin-bottom: 1.5rem;
 }
 
-.registration-form input[type="text"],
-.registration-form input[type="password"],
-.registration-form input[type="email"],
+.registration-form input,
 .registration-form select {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
-  box-sizing: border-box;
 }
 
-.registration-form button[type="submit"] {
+.registration-form button {
   width: 100%;
   padding: 0.75rem;
   background-color: #007bff;
@@ -54,37 +91,41 @@
   color: #fff;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
-.registration-form button[type="submit"]:hover {
+.registration-form button:hover {
   background-color: #0056b3;
-  transform: scale(1.02);
 }
 
 .registration-form .login-link {
   color: #007bff;
+  font-weight: 600;
   cursor: pointer;
-  text-decoration: underline;
 }
 
 .registration-form .login-link:hover {
   color: #0056b3;
+  text-decoration: underline;
+}
+
+.registration-form p {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 @media (max-width: 768px) {
-  .registration-form h2 {
-    font-size: 1.6rem;
+  .container-with-image {
+    flex-direction: column;
   }
 
-  .registration-form input[type="text"],
-  .registration-form input[type="password"],
-  .registration-form input[type="email"],
-  .registration-form select {
-    font-size: 0.9rem;
+  .image-side {
+    height: 200px; /* Adjust image size on smaller screens */
+    background-position: center; /* Reset position on small screens */
   }
 
-  .registration-form button[type="submit"] {
-    font-size: 1rem;
+  .form-side {
+    padding: 1rem;
   }
 }
