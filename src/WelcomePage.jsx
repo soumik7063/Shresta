@@ -27,11 +27,19 @@ const WelcomeComponent = () => {
 
   const handleNextClick = async () => {
     if (wardNo && selectedLocation && pincode && state && address && phonenumber && isNotARobot) {
+      // Check if the phone number is verified (if OTP is already sent)
+      const isPhoneVerified = localStorage.getItem('otp') ? true : false;
+  
+      if (!isPhoneVerified) {
+        toast.error("Please verify your phone number before proceeding.");
+        return; // Stop further execution if phone is not verified
+      }
+  
       const phoneNumber = `+91${phonenumber}`;
       const otp = generateOTP();
       setLoadingOTP(true);
       localStorage.setItem('otp', otp);
-
+  
       try {
         const response = await fetch('https://shresta-1.onrender.com/send-otp', {
           method: 'POST',
@@ -41,13 +49,13 @@ const WelcomeComponent = () => {
             body: `Your OTP code is: ${otp}`,
           }),
         });
-
+  
         const data = await response.json();
         if (data.success) {
           toast.success("OTP sent successfully!");
           navigate('/Pass1');
         } else {
-          toast.error("Failed to send OTP. Please try again.");
+          toast.error("Please verify your Number.Contact Admin");
         }
       } catch (error) {
         console.error("Error sending OTP:", error);
@@ -59,6 +67,7 @@ const WelcomeComponent = () => {
       toast.error("Please fill in all fields and verify you're not a robot.");
     }
   };
+  
 
   const statesList = [
     'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana',

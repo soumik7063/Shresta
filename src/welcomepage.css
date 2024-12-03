@@ -1,20 +1,20 @@
 .welcome-page {
   position: relative;
-  min-height: 100vh; /* Ensure the page takes full height */
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: url('https://static.vecteezy.com/system/resources/thumbnails/025/055/170/large/smartphone-app-map-with-location-icon-and-route-web-animation-of-navigation-in-a-big-city-app-screen-of-traveling-city-map-background-localization-gps-travel-and-navigation-concept-video.jpg') no-repeat center center/cover;
-  color: #fff;
+  color: #100202;
 }
 
 .content-box {
-  background-color: rgba(30, 163, 245, 0.8); /* Semi-transparent background */
+  background-color: rgba(30, 163, 245, 0.8);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px; /* Limit width for better readability */
+  max-width: 500px; /* Increased width */
   box-sizing: border-box;
 }
 
@@ -50,7 +50,7 @@ input[type="text"] {
   width: 100%;
   box-sizing: border-box;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #1b1818;
 }
 
 textarea {
@@ -105,7 +105,7 @@ input[type="checkbox"]:checked::after {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #f7f1f1;
 }
 
 input[type="checkbox"]:hover {
@@ -128,43 +128,34 @@ label:hover {
   display: block;
   margin: 20px auto 0;
   padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
   background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
 }
+
+.next-button:disabled {
+  background-color: #b0bec5;
+  cursor: not-allowed;
+}
+.phonenumber input[type="text"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #000; /* Ensure text color is black or visible */
+  font-size: 16px; /* Optional: Adjust font size for better visibility */
+}
+
 
 .next-button:hover {
   background-color: #388e3c;
-}
-
-/* Optional: Add media queries for smaller screens */
-@media (max-width: 600px) {
-  .content-box {
-    padding: 15px;
-    width: 90%; /* Adjust the width for smaller screens */
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-
-  input[type="text"],
-  select,
-  textarea {
-    padding: 10px;
-  }
-
-  .location-icon {
-    font-size: 1.2em; /* Adjust the icon size */
-  }
-
-  .next-button {
-    width: 100%;
-    padding: 12px 20px;
-  }
 }
