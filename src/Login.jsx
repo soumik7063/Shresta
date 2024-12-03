@@ -5,7 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import './login.css';
 import { db2 } from './firebaseRegistrationConfig';
 import { getDocs, collection, where, query } from 'firebase/firestore';
-import background from './login.jpg';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -25,65 +24,104 @@ const Login = () => {
     try {
       const emailQuery = query(dbref, where('Email', '==', email));
       const passwordQuery = query(dbref, where('Password', '==', password));
-      
+
       const emailSnapshot = await getDocs(emailQuery);
       const passwordSnapshot = await getDocs(passwordQuery);
 
       const emailArray = emailSnapshot.docs.map((doc) => doc.data());
       const passwordArray = passwordSnapshot.docs.map((doc) => doc.data());
 
-      // Check if the email and password match
       if (emailArray.length > 0 && passwordArray.length > 0) {
-        // Check the domain of the email
         if (email.endsWith('@svecw.edu.in')) {
           toast.success('Login successful! Redirecting to Dashboard 😊🎉', {
-            position: 'top-center'
+            position: 'top-center',
           });
           setTimeout(() => {
             navigate('/dashboard');
-          }, 2000); // Delay navigation by 2 seconds (2000 milliseconds)
+          }, 2000);
         } else {
           toast.success('Login successful! 😊🎉', {
-            position: 'top-center'
+            position: 'top-center',
           });
           setTimeout(() => {
             navigate('/WelcomePage');
-          }, 2000); // Delay navigation by 2 seconds (2000 milliseconds)
+          }, 2000);
         }
       } else {
         toast.error('Check your Credentials ❌', {
-          position: 'top-center'
+          position: 'top-center',
         });
       }
     } catch (error) {
       toast.error('An error occurred. Please try again ⚠️', {
-        position: 'top-center'
+        position: 'top-center',
       });
     }
   };
 
   return (
-    <div className="login-container" style={{ backgroundImage: `url(${background})` }}>
-      <form className="login-form" onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
-        <h2>LOGIN</h2>
-        <input
-          type="text"
-          placeholder="Email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          required
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
-        <p>Don't have an account? <span onClick={handleRegister} className="register-link">Register</span></p>
-        <p className="links"><span onClick={handleForgotPassword} className="forgot-password">Forgot Password?</span></p>
-      </form>
+    <div className="login-container">
+      <div className="login-box-wrapper">
+        <div className="login-box">
+          {/* Image Section */}
+          <div className="image-section">
+            <img
+              src="https://media.istockphoto.com/id/1305268276/vector/registration-abstract-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=nfvUbHjcNDVIPdWkaxGx0z0WZaAEuBK9SyG-aIqg2-0="
+              alt="Registration Illustration"
+            />
+          </div>
+
+          {/* Form Section */}
+          <div className="form-section">
+            <form
+              className="login-form"
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleLogin();
+              }}
+            >
+              <h2 className="welcome-heading">Welcome Back!</h2>
+              {/* Email Input */}
+              <div className="form-group">
+                <label>Email</label>
+                <input
+                  type="text"
+                  placeholder="Enter your email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+
+              {/* Password Input */}
+              <div className="form-group">
+                <label>Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+
+              {/* Login Button */}
+              <button type="submit">Login</button>
+
+              {/* Register and Forgot Password Links */}
+              <div className="login-options">
+                Don't have an account?{' '}
+                <span onClick={handleRegister} className="register-link">
+                  Register Here
+                </span>
+                <p className="forgot-password" onClick={handleForgotPassword}>
+                  Forgot Password?
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
       <ToastContainer />
     </div>
   );

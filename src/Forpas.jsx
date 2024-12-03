@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import firebase from './firebase'; // Import firebase initialization
-import './login.css'; // Assuming you have CSS for styling
+import './Pass1.css'; // Assuming you have CSS for styling
 import { useNavigate } from 'react-router-dom';
 import background from './forgot.jpg';
 
@@ -42,35 +42,37 @@ const Forpas = () => {
   };
 
   return (
-    <div className="login-container" style={{ backgroundImage :`url(${background})` }}>
-      <form className="login-form">
-        <h2>Forgot Password</h2>
-        <input
-          type="text"
-          placeholder="Username"
-          name="username"
-          value={username}
-          onChange={handleChange}
-          className="input-field"
-          required
-        />
-        <input
-          type="text"
-          placeholder="Phone Number"
-          name="phone"
-          value={phone}
-          onChange={handleChange}
-          className="input-field"
-          required
-        />
-        <button
-          type="button"
-          onClick={handleSendOtp}
-          className="send-otp-button"
-        >
-          Send OTP
-        </button>
-      </form>
+    <div className="forgot-password-container">
+      <div className="forgot-password-form-wrapper">
+        <form className="forgot-password-form">
+          <h2>Forgot Password</h2>
+          <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            value={username}
+            onChange={handleChange}
+            className="forgot-password-input"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Phone Number"
+            name="phone"
+            value={phone}
+            onChange={handleChange}
+            className="forgot-password-input"
+            required
+          />
+          <button
+            type="button"
+            onClick={handleSendOtp}
+            className="send-otp-button"
+          >
+            Send OTP
+          </button>
+        </form>
+      </div>
       <div id="sign-in-button"></div> {/* RecaptchaVerifier container */}
     </div>
   );
