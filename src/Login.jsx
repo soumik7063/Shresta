@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import eye icons
 import './login.css';
 import { db2 } from './firebaseRegistrationConfig';
 import { getDocs, collection, where, query } from 'firebase/firestore';
@@ -10,6 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
 
   const handleForgotPassword = () => {
     navigate('/forgotpassword');
@@ -85,7 +87,7 @@ const Login = () => {
               <div className="form-group">
                 <label>Email</label>
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Enter your email"
                   required
                   value={email}
@@ -96,13 +98,22 @@ const Login = () => {
               {/* Password Input */}
               <div className="form-group">
                 <label>Password</label>
-                <input
-                  type="password"
-                  placeholder="Enter your password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
+                <div className="password-input-container">
+                  <input
+                    type={showPassword ? 'text' : 'password'} // Toggle input type
+                    placeholder="Enter your password"
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  {/* Eye icon for showing/hiding password */}
+                  <div
+                    className="eye-icon"
+                    onClick={() => setShowPassword(!showPassword)} // Toggle showPassword state
+                  >
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  </div>
+                </div>
               </div>
 
               {/* Login Button */}

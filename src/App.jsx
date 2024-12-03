@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
+import Contact from './Contact';
 import Login from './Login';
 import StoreImageTextFirebase from './StoreImageTextFirebase.jsx';
 import WelcomePage from './WelcomePage';
@@ -25,6 +26,7 @@ const App = () => {
       {/* Layout Routes */}
       <Route path="/" element={<Layout />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/Contact" element={<Contact />} />
       <Route path="/register" element={<Registration />} />
       <Route path="/GetCurrentAddress" element={<GetCurrentAddress />} />
       <Route path="/forgotpassword" element={<ForgotPassword />} />

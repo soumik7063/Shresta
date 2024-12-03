@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   height: 100vh; /* Ensures it covers the full viewport height */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Aligns the content to the left */
   align-items: center;
   color: white; /* Text color to contrast with the background */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow for better readability */
@@ -13,24 +13,7 @@
   padding: 20px;
   box-sizing: border-box;
   overflow: hidden; /* Ensures no scrollbars appear */
-  position: relative; /* To position the overlay */
-}
-
-.thankyou-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 250%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.3); /* Light overlay for the lighting effect */
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 1;
-}
-
-.thankyou-container:hover::before {
-  opacity: 1; /* Show overlay on hover */
+  padding-left: 50px; /* Adds space between the container and the left edge */
 }
 
 .thankyou-message {
@@ -40,17 +23,8 @@
   border-radius: 15px; /* Rounded corners for a softer look */
   width: 400px; /* Increased width for a more spacious design */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow for lighting effect */
-  position: relative;
-  z-index: 2; /* Ensure the message container is above the overlay */
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for shadow and scale */
-  transform: translateX(-50%); /* Center the container horizontally */
-  margin-left: -5%; /* Adjust margin to account for width and center it */
 }
 
-.thankyou-message:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7); /* Darker shadow on hover */
-  transform: translateX(-50%) scale(1.05); /* Slight scale effect on hover */
-}
 
 .thankyou-message h1 {
   font-size: 2.5rem;

@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: skyblue; /* Skyblue color around the container */
+  background-color: rgb(32, 143, 212); /* Skyblue color around the container */
   min-height: 100vh;
   padding: 2rem;
 }
