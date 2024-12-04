@@ -4,7 +4,6 @@ const GetCurrentAddress = ({ onAddressFetched }) => {
     useEffect(() => {
         const fetchAddress = async (latitude, longitude) => {
             const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&addressdetails=1&accept-language=en`;
-
             try {
                 const response = await fetch(url);
                 if (!response.ok) {
