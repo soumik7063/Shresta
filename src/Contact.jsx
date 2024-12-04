@@ -1,4 +1,5 @@
 import React from "react";
+import { FaHome, FaInfoCircle, FaPhone } from "react-icons/fa"; // Import icons
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"; // Import icons
 import './contact.css';  // Adjust the path if needed
 const Contact = () => {
@@ -12,26 +13,29 @@ const Contact = () => {
     >{/* Navbar */}
 {/* Navbar */}
 <nav className="navbar">
-  <div className="container">
-    {/* Logo */}
-    <a
-      href="#"
-      className="logo"
-    >
-      Shresta
-    </a>
+        <div className="container">
+          {/* Logo */}
+          <a href="#" className="logo text-dark">
+            Shresta
+          </a>
 
-    {/* Navigation Links */}
-    <ul className="nav-links">
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/aboutus">About Us</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+          {/* Navigation Links */}
+          <ul className="nav-links flex items-center space-x-6">
+            <li className="flex items-center space-x-2">
+              <FaHome className="text-dark" />
+              <a href="/" className="text-dark">Home</a>
+            </li>
+            <li className="flex items-center space-x-2">
+              <FaInfoCircle className="text-dark" />
+              <a href="/aboutus" className="text-dark">About Us</a>
+            </li>
+            <li className="flex items-center space-x-2">
+              <FaPhone className="text-dark" />
+              <a href="/contact" className="text-dark">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
 
 
@@ -61,14 +65,15 @@ const Contact = () => {
 
             {/* LinkedIn Link */}
             <a
-              href="https://www.linkedin.com/in/sailaja-adapa/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-700 text-white py-4 px-10 rounded-full shadow-xl hover:bg-blue-800 transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center space-x-4"
-            >
-              <FaLinkedin size={24} /> {/* LinkedIn icon */}
-              <span>LinkedIn</span>
-            </a>
+  href="https://www.linkedin.com/in/sailaja-adapa-770167291/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-blue-700 text-white py-4 px-10 rounded-full shadow-xl hover:bg-blue-800 transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center space-x-4"
+>
+  <FaLinkedin size={24} /> {/* LinkedIn icon */}
+  <span>LinkedIn</span>
+</a>
+
 
             {/* Email Link */}
             <a
