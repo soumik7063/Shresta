@@ -59,7 +59,7 @@ Check out the live demo of the platform [Shresta City Insight](https://shresta.v
 
 To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js** and **npm** installed on your machine 💻. Then, **fork** the repo 🍴 and **clone** it to your local machine:
 
-git clone https://github.com/your-username/Shresta-City-Insight.git
+git clone https://github.com/sailaja-adapa/Shresta.git
 
 Next, navigate to the project directory 📂 and install the dependencies 🔧:
 cd Shresta-City-Insight
@@ -101,19 +101,9 @@ The project aims to tackle social issues like waste management, civic improvemen
 
 ---
 
-## Future Scope 🔮
-
-- Implement **AI/ML** for automatic issue categorization.
-- Expand reach to more cities and organizations.
-- Continue improving the user interface and user experience.
-
----
-
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 
