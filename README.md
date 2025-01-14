@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+<div align="center">
+  <img width="400" alt="Shresta City Insight" align='center' src="path_to_your_logo.png">
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<hr>
 
-## Available Scripts
+<div align="center">
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg" />&nbsp;
+  <img src="https://forthebadge.com/images/badges/uses-brains.svg" />&nbsp;
+  <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+</div>
+<br>
 
-In the project directory, you can run:
+<div align="center">
+  <table align="center">
+    <thead align="center">
+      <tr border: 1px;>
+        <td><strong>🌟 Stars</strong></td>
+        <td><strong>🍴 Forks</strong></td>
+        <td><strong>🐛 Issues</strong></td>
+        <td><strong>🔔 Open PRs</strong></td>
+        <td><strong>🔕 Closed PRs</strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://github.com/your-username/Shresta-City-Insight/stargazers" target="_blank"><img alt="Stars" src="https://img.shields.io/github/stars/your-username/Shresta-City-Insight?style=for-the-badge&logo=github"/></a></td>
+        <td><a href="https://github.com/your-username/Shresta-City-Insight/forks" target="_blank"><img alt="Forks" src="https://img.shields.io/github/forks/your-username/Shresta-City-Insight?style=for-the-badge&logo=git&logoColor=white"/></a></td>
+        <td><a href="https://github.com/your-username/Shresta-City-Insight/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/your-username/Shresta-City-Insight?style=for-the-badge&logo=target&color=red"/></a></td>
+        <td><a href="https://github.com/your-username/Shresta-City-Insight/pulls?q=is%3Aopen+is%3Apr" target="_blank"><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/your-username/Shresta-City-Insight?style=for-the-badge&logo=github&color=green"/></a></td>
+        <td><a href="https://github.com/your-username/Shresta-City-Insight/pulls?q=is%3Apr+is%3Aclosed" target="_blank"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/your-username/Shresta-City-Insight?style=for-the-badge&color=green&logo=github"/></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-### `npm start`
+<hr>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Problem Statement 😖
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Urban areas face critical challenges like waste management inefficiency, traffic issues, and unsafe public spaces. At the same time, citizens often struggle to report such problems effectively. This leads to delayed resolutions, further deteriorating the environment and public well-being.
 
-### `npm test`
+**Shresta-City Insight** aims to solve this by providing a platform for citizens to report civic issues like garbage on roads, traffic hazards, etc., ensuring timely action and reducing environmental impact.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Proposed Solution 🤩
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Shresta-City Insight** allows users to report issues, track resolutions, upload evidence (such as photos), and receive notifications about the progress of their complaints. It leverages **Firebase** for backend services, and **Twilio** for real-time SMS notifications, keeping users informed about their reports.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Glimpse ✨
+Check out the live demo of the platform [Shresta City Insight](https://shresta.vercel.app/)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### How to Set Up
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js** and **npm** installed on your machine 💻. Then, **fork** the repo 🍴 and **clone** it to your local machine:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+git clone https://github.com/your-username/Shresta-City-Insight.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Next, navigate to the project directory 📂 and install the dependencies 🔧:
+cd Shresta-City-Insight
+npm install
 
-## Learn More
+Finally, start the local server to run the project locally 🌍:
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This will launch the development server at http://localhost:3000/ 🖥️.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Tech Stack Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<div align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black">
+  <img src="https://img.shields.io/badge/ReactJS-61DAFB.svg?style=for-the-badge&logo=React&logoColor=white">
+  <img src="https://img.shields.io/badge/Firebase-FFCA28.svg?style=for-the-badge&logo=Firebase&logoColor=black">
+  <img src="https://img.shields.io/badge/NodeJS-339933.svg?style=for-the-badge&logo=Node.js&logoColor=white">
+  <img src="https://img.shields.io/badge/Express.js-000000.svg?style=for-the-badge&logo=Express&logoColor=white">
+  <img src="https://img.shields.io/badge/Twilio-000000.svg?style=for-the-badge&logo=Twilio&logoColor=white">
+</div>
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Features
 
-### Making a Progressive Web App
+- **Civic Issue Reporting**: Report issues with real-time tracking.
+- **Secure User Authentication** and Authorization.
+- **OTP Authentication** using Firebase for secure user verification.
+- **Real-time Notifications** via SMS using Twilio.
+- **Scalable Infrastructure** with Firebase services.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Our Goals 🎯
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The project aims to tackle social issues like waste management, civic improvements, and community-driven change.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Future Scope 🔮
 
-### `npm run build` fails to minify
+- Implement **AI/ML** for automatic issue categorization.
+- Expand reach to more cities and organizations.
+- Continue improving the user interface and user experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+<h3 align="center"> Show some ❤️ by starring this awesome repository! </h3>
