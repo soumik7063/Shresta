@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="400" alt="Shresta City Insight" align='center' src="https://ibb.co/Zc2bQ7d">
+  <img width="400" alt="Shresta City Insight" align="center" src="C:/Users/hp/OneDrive/Desktop/projectmun/lekha/image.png">
 </div>
 
 <hr>
