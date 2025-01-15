@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="400" alt="Shresta City Insight" align="center" src="C:/Users/hp/OneDrive/Desktop/projectmun/lekha/image.png">
+  <img width="400" alt="Shresta City Insight" align="center" src="image.png">
 </div>
 
 <hr>
