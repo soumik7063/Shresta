@@ -61,8 +61,8 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
 
 git clone https://github.com/sailaja-adapa/Shresta.git
 
-Next, navigate to the project directory 📂 and install the dependencies 🔧:
-cd Shresta-City-Insight
+Next, navigate to the project directory 📂 and install the dependencies 🔧: 
+cd lekha
 npm install
 
 Finally, start the local server to run the project locally 🌍:
