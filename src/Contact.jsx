@@ -65,7 +65,7 @@ const Contact = () => {
 
             {/* LinkedIn Link */}
             <a
-  href="https://www.linkedin.com/in/sailaja-adapa-770167291/"
+  href="https://www.linkedin.com/in/akshaya-adapa-770167291"
   target="_blank"
   rel="noopener noreferrer"
   className="bg-blue-700 text-white py-4 px-10 rounded-full shadow-xl hover:bg-blue-800 transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center space-x-4"
@@ -77,12 +77,14 @@ const Contact = () => {
 
             {/* Email Link */}
             <a
-              href="mailto:adapasailaja17@gmail.com"
-              className="bg-green-500 text-white py-4 px-10 rounded-full shadow-xl hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center space-x-4"
-            >
-              <FaEnvelope size={24} /> {/* Email icon */}
-              <span>Email</span>
-            </a>
+  href="mailto:adapasailaja17@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-green-500 text-white py-4 px-10 rounded-full shadow-xl hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center space-x-4"
+>
+  <FaEnvelope size={24} />
+  <span>Email</span>
+</a>
           </div>
         </div>
       </section>
