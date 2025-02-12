@@ -93,8 +93,6 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
     >**npm start**
 
     This will launch the development server at:
-
-    
     👉 **http://localhost:3000/** 🖥️
 
 ## Tech Stack Used
