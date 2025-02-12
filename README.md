@@ -62,24 +62,38 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
 
 2) Then, **fork** the repo🍴 by clicking at the fork button on github and give it a name
 3) **clone** it to your local machine using:
+
+
 git clone https://github.com/yourusername/projectname.git
+
+
 projectname is the name given in step 2.
   
 
 4) Next, **navigate** to the project directory by typing these in the terminal of VS Code📂:
+
+
 cd ~ 
+
+
 **cd projectname**
+
+
 ex: cd Shresta-city-insight
 
 
 5) **Install** the dependencies 🔧:
+
+
 **npm install**  
 
 6) Finally, start the local server to run the project locally 🌍:
+
+
 **npm start**
 
-This will launch the development server at:
-👉 **http://localhost:3000/** 🖥️
+  This will launch the development server at:
+  👉 **http://localhost:3000/** 🖥️
 
 ## Tech Stack Used
 
