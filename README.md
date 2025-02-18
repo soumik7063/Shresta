@@ -24,11 +24,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/stargazers" target="_blank"><img alt="Stars" src="https://img.shields.io/github/stars/your-username/Shresta-City-Insight?style=for-the-badge&logo=github"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/forks" target="_blank"><img alt="Forks" src="https://img.shields.io/github/forks/your-username/Shresta-City-Insight?style=for-the-badge&logo=git&logoColor=white"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/your-username/Shresta-City-Insight?style=for-the-badge&logo=target&color=red"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/pulls?q=is%3Aopen+is%3Apr" target="_blank"><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/your-username/Shresta-City-Insight?style=for-the-badge&logo=github&color=green"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/pulls?q=is%3Apr+is%3Aclosed" target="_blank"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/your-username/Shresta-City-Insight?style=for-the-badge&color=green&logo=github"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/stargazers" target="_blank"><img alt="Stars" src="https://img.shields.io/github/stars/sailaja-adapa/Shresta?style=for-the-badge&logo=github"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/forks" target="_blank"><img alt="Forks" src="https://img.shields.io/github/forks/sailaja-adapa/Shresta?style=for-the-badge&logo=git&logoColor=white"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/sailaja-adapa/Shresta?style=for-the-badge&logo=target&color=red"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/pulls?q=is%3Aopen+is%3Apr" target="_blank"><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/sailaja-adapa/Shresta?style=for-the-badge&logo=github&color=green"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/pulls?q=is%3Apr+is%3Aclosed" target="_blank"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/sailaja-adapa/Shresta?style=for-the-badge&color=green&logo=github"/></a></td>
       </tr>
     </tbody>
   </table>
