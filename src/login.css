@@ -123,19 +123,35 @@
 }
 
 .form-group input {
+  color: white; /* Ensure text is black */
+  background-color: #c9d3d4; /* White background */
   width: 100%;
   padding: 0.8rem;
   border: 1px solid #ced6e0;
   border-radius: 5px;
   font-size: 1rem;
-  background-color: #f8f9fa;
   transition: border-color 0.3s, background-color 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: white; 
+  opacity: 1;
 }
 
 .form-group input:focus {
   border-color: #007bff;
-  background-color: #ffffff;
+  background-color: #c8d4d5;
   outline: none;
+}
+
+.form-group span{
+  position: relative;
+}
+
+.form-group .icon{
+  position: absolute;
+  top: 4px;
+  right: -1.1rem;
 }
 
 /* Login button */
