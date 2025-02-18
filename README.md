@@ -124,15 +124,15 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
   + **Citizen Workflow 👩‍🦰:**
     - User registers using their email Id and fills in a few details.
     - User recieves OTP on their mobile number for verification.
-    - ![OTP message](image-1.png)
+      ![OTP message](image-1.png)
     - Login using given email Id and password.
     - Lands on complaint page. User can upload any civic complaints along with a picture/file upload.
     
   + **Officer Workflow 👮‍♂️:**
     - Officer can see the dashboard of all complaints along with their respective images.
     - Once the officer clicks resolve , user will be sent a message on their phone number saying 
-      "your issue has baan resolved".
-    - ![Issue Resolved message](image-2.png) 
+      "Your issue has been resolved".
+      ![Issue Resolved message](image-2.png) 
     - User will be taken to User Satisfaction page for rating.
 
 ## Our Goals 🎯
