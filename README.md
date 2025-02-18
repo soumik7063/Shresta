@@ -124,7 +124,7 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
   + **Citizen Workflow 👩‍🦰:**
     - User registers using their email Id and fills in a few details.
     - User recieves OTP on their mobile number for verification.
-    <br>  
+      <br>  
       ![OTP message](image-1.png)
       <br>  
     - Login using given email Id and password.
@@ -136,7 +136,7 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
       "Your issue has been resolved".
       <br>  
       ![Issue Resolved message](image-2.png) 
-    <br>  
+      <br>  
     - User will be taken to User Satisfaction page for rating.
 
 ## Our Goals 🎯
