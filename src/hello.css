@@ -1,130 +1,191 @@
+/* Overall container */
 .store-image-text-firebase {
-  background-image: url('./pic3.avif');
+  background-image: url(StoreImageTextFirebasebg.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 100vh; /* Ensures it covers the full viewport height */
   display: flex;
-  justify-content: center;
+  height: 100vh;
+  width: 100vw;
   align-items: center;
+  justify-content: center;
   padding: 20px;
   box-sizing: border-box;
+  background-color: #f0f4f8;
+  overflow: auto;
+  gap: 40px; /* Increases spacing between image and container */
 }
 
-.store-image-text-firebase .container {
-  background-color: rgba(24, 101, 233, 0.7); /* Black box with transparency */
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px; /* Adjust the max width as needed */
-  color: rgb(19, 1, 1); /* Ensure text is readable */
-}
-
-.store-image-text-firebase .form-group {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.store-image-text-firebase .form-group label {
-  margin-right: 10px;
-  min-width: 80px; /* Adjust label width for alignment */
-}
-
-.store-image-text-firebase .form-group input,
-.store-image-text-firebase .form-group .textarea {
+/* Background image section */
+.store-image-text-firebase img {
   flex: 1;
+  max-width: 35%; /* Ensures image is well-sized */
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.store-image-text-firebase .form-group input {
-  width: calc(30% - 20px); /* Adjust width calculation to be narrower */
-  height: 30px; /* Adjust height */
-  padding: 4px; /* Adjust padding */
-  border: 1px solid #ccc;
-  border-radius: 4px; /* Adjust border radius */
-  font-size: 14px; /* Adjust font size */
-}
-
-.store-image-text-firebase .textarea {
-  width: calc(100% - 20px); /* Increase width calculation */
-  height: 150px; /* Increase height */
-  padding: 12px; /* Increase padding for better readability */
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  resize: none; /* Prevent resizing */
-  font-size: 16px; /* Adjust font size */
-  line-height: 1.6; /* Adjust line height for readability */
-}
-
-.store-image-text-firebase .add-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #eaecee;
-  color: rgb(12, 4, 4);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.store-image-text-firebase .add-button:hover {
-  background-color: #0056b3;
-}
-/* hello.css */
+/* Form container */
 .container {
-  position: relative; /* Ensure the container has relative positioning */
+  flex: 1;
+  max-width: 550px; /* Increased width */
+  background: rgba(255, 255, 255, 0.3);
+  padding: 30px; /* More padding for better spacing */
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  margin-left: 5%; /* Kept slightly left but not too much */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .container:hover {
+  transform: scale(1.05);
+  transition-duration: 0.2s;
+} */
+
+/* File input */
+.file-input {
+  display: block;
+  color: #ffffff;
+  font: bold;
+  background: rgba(255, 255, 255, 0);
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+
+/* Input and Textarea */
+input, textarea {
   width: 100%;
-  max-width: 600px; /* Adjust max-width as needed */
-  margin: 0 auto;
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 14px; 
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.phone-number-container{
+  width: 100%;
 }
 
 .textarea-container {
-  position: relative; /* Relative positioning for the container of the textarea and buttons */
-}
-
-.textarea {
-  width: 100%;
-  height: 150px; /* Adjust height as needed */
-  padding: 10px;
+  width: 100%;  /* Makes textarea take full width */
+  min-width: 100%; /* Prevents shrinking */
+  max-width: 100%; /* Ensures it doesn't exceed the container */
+  height: 295px;  /* Increased height */
+  padding: 12px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 16px;
-  box-sizing: border-box;
-  resize: none; /* Disable resizing */
+  resize: none; /* Prevents manual resizing */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
-.speech-buttons {
-  position: absolute;
-  bottom: 10px; /* Distance from the bottom */
-  right: 10px; /* Distance from the right */
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Space between buttons */
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 1);
 }
 
+/* Textarea */
+.textarea { /* Increased height for more content */
+  height: 100%;
+  resize: none;
+}
+
+/* Speech Buttons */
 .speech-buttons {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 10px; /* Adjust space between textarea and buttons */
+  gap: 2rem;
+  margin-top: 12px;
 }
 
 .speech-button {
-  background-color: #fff; /* Button background color */
-  border: 1px solid #ddd; /* Button border */
-  border-radius: 50%; /* Circular buttons */
-  padding: 10px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 14px;
   cursor: pointer;
-  font-size: 24px; /* Adjust icon size */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow for better visibility */
-  margin: 0 5px; /* Space between buttons */
-}
-
-.speech-button:disabled {
-  opacity: 0.5; /* Reduce opacity when disabled */
-  cursor: not-allowed;
+  font-size: 26px;
+  transition: transform 0.3s ease;
 }
 
 .speech-button.mic {
-  color: green; /* Color for the microphone button */
+  color: green;
 }
 
 .speech-button.stop {
-  color: red; /* Color for the stop button */
+  color: red;
+}
+
+.speech-button:hover {
+  transform: scale(1.1);
+}
+
+/* Phone Number Input */
+.phone-number-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Upload Button */
+.add-button {
+  /* margin-top: 20px; */
+  padding: 14px 50px;
+  background: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.add-button:hover {
+  background: #0056b3;
+}
+
+/* Message */
+.message {
+  margin-top: 12px;
+  color: yellow;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .store-image-text-firebase {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    gap: 20px; /* Adjust spacing for small screens */
+  }
+
+  .store-image-text-firebase img {
+    margin-top: 80%;
+    width: 80%; /* Adjusts for smaller screens */
+    max-width: 300px;
+    height: auto;
+  }
+
+  .container {
+    width: 95%;
+    max-width: 450px; /* Increased for better spacing */
+    margin-left: 0;
+    padding: 30px;
+  }
+
+  .add-button{
+    margin-top: 20px;
+  }
 }
