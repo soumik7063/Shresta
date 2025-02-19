@@ -121,8 +121,8 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
 ## Workflow
 
   + **Citizen Workflow 👩‍🦰:**
-    - The user is required to using their Google email ID (@gmail.com) for authentication and must provide the required details.🔐
-    - The user logs in using registered email Id and password.
+    - The user is required to register using their Google email ID (@gmail.com) for authentication and must provide the required details.📩
+    - The user logs in using registered email Id and password.🔐
     - The user provides their location manually or allows it to be retrieved via an API. 📍
     - An OTP is sent to their registered mobile number for verification, which must be entered to proceed. 🔢
       <br>  
@@ -134,6 +134,7 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
     - After submitting the complaint, the user is navigated to the Thank you Page, where they have the option to provide feedback on their experience. ✍️
     
   + **Officer Workflow 👮‍♂️:**
+    
     - Officer can see the dashboard of all complaints along with their respective images.
     - Once the officer clicks resolve , user will be sent a message on their phone number saying 
       "Your issue has been resolved".
