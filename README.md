@@ -130,7 +130,7 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
       ![OTP message](image-1.png)
       <br>  
     
-    - Lands on complaint page. User can upload any civic complaints along with a picture/file upload.
+    - User lands on complaint page. They can upload any civic complaints along with a picture/file.
     - User will be taken to User Satisfaction page for rating.
     
   + **Officer Workflow 👮‍♂️:**
