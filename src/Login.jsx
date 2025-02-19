@@ -6,6 +6,8 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import eye icons
 import './login.css';
 import { db2 } from './firebaseRegistrationConfig';
 import { getDocs, collection, where, query } from 'firebase/firestore';
+import { MdEmail } from "react-icons/md";
+import { RiLockPasswordFill } from "react-icons/ri";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -85,7 +87,7 @@ const Login = () => {
               <h2 className="welcome-heading">Welcome Back!</h2>
               {/* Email Input */}
               <div className="form-group">
-                <label>Email</label>
+                <label>Email <span><MdEmail className='icon'/></span> </label>
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -97,7 +99,7 @@ const Login = () => {
 
               {/* Password Input */}
               <div className="form-group">
-                <label>Password</label>
+                <label>Password <span><RiLockPasswordFill className='icon'/></span></label>
                 <div className="password-input-container">
                   <input
                     type={showPassword ? 'text' : 'password'} // Toggle input type
