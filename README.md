@@ -123,12 +123,15 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
 
   + **Citizen Workflow 👩‍🦰:**
     - User registers using their email Id and fills in a few details.
-    - User recieves OTP on their mobile number for verification.
+    - Login using given email Id and password.
+    - User enters their location.
+    - User recieves OTP on their mobile number for verification and enters it.
       <br>  
       ![OTP message](image-1.png)
       <br>  
-    - Login using given email Id and password.
+    
     - Lands on complaint page. User can upload any civic complaints along with a picture/file upload.
+    - User will be taken to User Satisfaction page for rating.
     
   + **Officer Workflow 👮‍♂️:**
     - Officer can see the dashboard of all complaints along with their respective images.
@@ -137,7 +140,7 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
       <br>  
       ![Issue Resolved message](image-2.png) 
       <br>  
-    - User will be taken to User Satisfaction page for rating.
+    
 
 ## Our Goals 🎯
 
