@@ -121,7 +121,7 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
 ## Workflow
 
   + **Citizen Workflow 👩‍🦰:**
-    - The user registers using their email Id and provides the required details. 🔐
+    - The user is required to using their Google email ID (@gmail.com) for authentication and must provide the required details.🔐
     - The user logs in using registered email Id and password.
     - The user provides their location manually or allows it to be retrieved via an API. 📍
     - An OTP is sent to their registered mobile number for verification, which must be entered to proceed. 🔢
