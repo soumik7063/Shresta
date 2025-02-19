@@ -1,5 +1,4 @@
 import React from "react";
-import { FaHome, FaInfoCircle, FaPhone } from "react-icons/fa"; // Import icons
 import './Aboutus.css';  
 
 const AboutUs = () => {

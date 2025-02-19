@@ -27,6 +27,12 @@ const Navbar = () => {
           backdropFilter: 'blur(8px)'
         });
         break;
+      case '/StoreImageTextFirebase':
+        setNavStyle({
+          background: 'rgba(4, 95, 206, 0.55)',  // Medium blue
+          backdropFilter: 'blur(8px)'
+        });
+        break;
       default:
         setNavStyle({
           background: 'rgba(30, 41, 59, 0.35)',  // Navy blue
