@@ -121,18 +121,17 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
 ## Workflow
 
   + **Citizen Workflow 👩‍🦰:**
-    - User registers using their email Id and provides the required details.🔐
-    - User logs in using registered email Id and password.
-    - The user enters their location . Alternatively, the location can also retrieved via an API.📍
-    - An OTP is sent to their registered mobile number for verification, which they must enter to      proceed.🔢
+    - The user registers using their email Id and provides the required details. 🔐
+    - The user logs in using registered email Id and password.
+    - The user provides their location manually or allows it to be retrieved via an API. 📍
+    - An OTP is sent to their registered mobile number for verification, which must be entered to proceed. 🔢
       <br>  
       ![OTP message](image-1.png)
       <br>  
     
-    - Upon successful verification, the user is directed to the Complaint Page where they can submit    civic complaints by uploading images or files.📸📁
-    - Alternatively, they can use voice input to file a complaint, which is converted to text using a   Speech-to-Text API.🎙️🗣️
-    - After submitting the complaint, the user is redirected to the Thank You Page.
-      They have the option to provide feedback on their experience. 
+    - Upon successful verification, the user is redirected to the Complaint Submission Portal where they can report civic issues by uploading relevant images or documents. 📸📁
+    - Alternatively, users can utilize voice input to lodge a complaint, which is transcribed into text via a Speech-to-Text API. 🎙️🗣️
+    - After submitting the complaint, the user is navigated to the Thank you Page, where they have the option to provide feedback on their experience. ✍️
     
   + **Officer Workflow 👮‍♂️:**
     - Officer can see the dashboard of all complaints along with their respective images.
