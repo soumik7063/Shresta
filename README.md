@@ -24,11 +24,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/stargazers" target="_blank"><img alt="Stars" src="https://img.shields.io/github/stars/your-username/Shresta-City-Insight?style=for-the-badge&logo=github"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/forks" target="_blank"><img alt="Forks" src="https://img.shields.io/github/forks/your-username/Shresta-City-Insight?style=for-the-badge&logo=git&logoColor=white"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/your-username/Shresta-City-Insight?style=for-the-badge&logo=target&color=red"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/pulls?q=is%3Aopen+is%3Apr" target="_blank"><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/your-username/Shresta-City-Insight?style=for-the-badge&logo=github&color=green"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/pulls?q=is%3Apr+is%3Aclosed" target="_blank"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/your-username/Shresta-City-Insight?style=for-the-badge&color=green&logo=github"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/stargazers" target="_blank"><img alt="Stars" src="https://img.shields.io/github/stars/sailaja-adapa/Shresta?style=for-the-badge&logo=github"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/forks" target="_blank"><img alt="Forks" src="https://img.shields.io/github/forks/sailaja-adapa/Shresta?style=for-the-badge&logo=git&logoColor=white"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/sailaja-adapa/Shresta?style=for-the-badge&logo=target&color=red"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/pulls?q=is%3Aopen+is%3Apr" target="_blank"><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/sailaja-adapa/Shresta?style=for-the-badge&logo=github&color=green"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/pulls?q=is%3Apr+is%3Aclosed" target="_blank"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/sailaja-adapa/Shresta?style=for-the-badge&color=green&logo=github"/></a></td>
       </tr>
     </tbody>
   </table>
@@ -118,6 +118,30 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
 - **Real-time Notifications** via SMS using Twilio.
 - **Scalable Infrastructure** with Firebase services.
 
+## Workflow
+
+  + **Citizen Workflow 👩‍🦰:**
+    - The user is required to register using their Google email ID (@gmail.com) for authentication and must provide the required details.📩
+    - The user logs in using registered email Id and password.🔐
+    - The user provides their location manually or allows it to be retrieved via an API. 📍
+    - An OTP is sent to their registered mobile number for verification, which must be entered to proceed. 🔢
+      <br>  
+      ![OTP message](image-1.png)
+      <br>  
+    
+    - Upon successful verification, the user is redirected to the Complaint Submission Portal where they can report civic issues by uploading relevant images or documents. 📸📁
+    - Alternatively, users can utilize voice input to lodge a complaint, which is transcribed into text via a Speech-to-Text API. 🎙️🗣️
+    - After submitting the complaint, the user is navigated to the Thank you Page, where they have the option to provide feedback on their experience. ✍️
+    
+  + **Officer Workflow 👮‍♂️:**
+    
+    - Officer can see the dashboard of all complaints along with their respective images.
+    - Once the officer clicks resolve , user will be sent a message on their phone number saying 
+      "Your issue has been resolved".
+      <br>  
+      ![Issue Resolved message](image-2.png) 
+      <br>  
+    
 
 ## Our Goals 🎯
 
