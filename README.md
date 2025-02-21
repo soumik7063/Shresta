@@ -126,7 +126,7 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
     - The user provides their location manually or allows it to be retrieved via an API. 📍
     - An OTP is sent to their registered mobile number for verification, which must be entered to proceed. 🔢
       <br>  
-      ![OTP message](image-1.png)
+      ![OTP message](OTP_msg.png)
       <br>  
     
     - Upon successful verification, the user is redirected to the Complaint Submission Portal where they can report civic issues by uploading relevant images or documents. 📸📁
@@ -140,7 +140,7 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
     - Upon successful login, officers gain access to the Complaint Management Dashboard, where they can review all submitted complaints along with their corresponding images. 🖥️📸
     - When an officer marks a complaint as resolved and selects the delete option, an automated notification is sent to the complainant via Twilio, informing them of the resolution. 📩🔔
       <br>  
-      ![Issue Resolved message](image-2.png) 
+      ![Issue Resolved message](Resolved_message.png) 
       <br>  
     
 
