@@ -133,11 +133,12 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
     - Alternatively, users can utilize voice input to lodge a complaint, which is transcribed into text via a Speech-to-Text API. 🎙️🗣️
     - After submitting the complaint, the user is navigated to the Thank you Page, where they have the option to provide feedback on their experience. ✍️
     
-  + **Officer Workflow 👮‍♂️:**
+  + **Officer Registration & Complaint Management Process 👮‍♂️📋 **
     
-    - Officer can see the dashboard of all complaints along with their respective images.
-    - Once the officer clicks resolve , user will be sent a message on their phone number saying 
-      "Your issue has been resolved".
+
+    - Officers are required to register using an official email ID with the "@svecw.edu.in" domain, as this domain is exclusively designated for authorized personnel. ✉️✅
+    - Upon successful login, officers gain access to the Complaint Management Dashboard, where they can review all submitted complaints along with their corresponding images. 🖥️📸
+    - When an officer marks a complaint as resolved and selects the delete option, an automated notification is sent to the complainant via Twilio, informing them of the resolution. 📩🔔
       <br>  
       ![Issue Resolved message](image-2.png) 
       <br>  
