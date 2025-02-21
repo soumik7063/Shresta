@@ -5,6 +5,8 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import GetCurrentAddress from './GetCurrentAddress';
 import { FaHome } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+
 
 const WelcomeComponent = () => {
   const [wardNo, setWardNo] = useState('');
@@ -103,11 +105,6 @@ const WelcomeComponent = () => {
       <ToastContainer />
       <div className="content-box">
         <h1>Welcome to Shreshta</h1>
-        
-        {/* Home icon that triggers address fetching */}
-        <div className="home-icon" onClick={handleHomeClick}>
-          <FaHome size={30} />
-        </div>
 
         {/* Pass the fetchAddressNow prop to GetCurrentAddress */}
         <GetCurrentAddress fetchAddressNow={fetchAddressNow} onAddressFetched={handleAddressFetched} />
@@ -136,10 +133,18 @@ const WelcomeComponent = () => {
           </select>
         </div>
 
-        <div className="address">
-          <label htmlFor="address">Enter Address:</label>
-          <textarea id="address" value={address} onChange={handleAddressChange}></textarea>
+        <div className="address-container">
+          <div className="address">
+            <label htmlFor="address">Enter Address:</label>
+            <textarea id="address" value={address} onChange={handleAddressChange}></textarea>
+          </div>
+
+          {/* Location Icon */}
+          <div onClick={handleHomeClick}>
+            <FaMapMarkerAlt size={30} className="location-icon"/>
+          </div>
         </div>
+
 
         <div className="phonenumber">
           <label htmlFor="phonenumber">Enter Phone Number:</label>
