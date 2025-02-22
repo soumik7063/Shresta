@@ -5,55 +5,43 @@ body, html {
 }
 
 .dashboard-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh; /* Full viewport height */
-  background: url('https://w0.peakpx.com/wallpaper/648/370/HD-wallpaper-welcome-autumn-digital-art-background-fall-autumn-leaves-leaf.jpg') no-repeat center center fixed; /* Background image */
+  background-color: oklch(0.985 0.002 247.839);
   background-size: cover; /* Ensure the background image covers the whole page */
+  padding: 80px 20px 0 20px;
 }
 
 .content-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for better text readability */
-  border: 2px solid #000; /* Black border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px;
-  max-width: 500px; /* Adjust as needed */
-  width: 100%;
-  box-sizing: border-box; /* Ensure padding and border are included in width */
+  max-width: 56rem;
+  margin: 0 auto;
 }
 
-.text-content {
-  color: #fff; /* Ensure text is readable on the background */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center children horizontally */
-  max-width: 60%; /* Adjust width as needed */
+.text-center {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-.button {
-  background-color: #007bff; /* Button color */
-  color: #fff; /* Text color on button */
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+.badge {
+  background-color: #f3f4f6; /* gray-100 */
+  color: #374151; /* gray-700 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  padding: 0.25rem 0.75rem; /* py-1 px-3 */
+  border-radius: 9999px; /* rounded-full */
+  display: inline-block;
 }
 
-.button:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
+.heading {
+  margin-top: 1rem;
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700; /* font-bold */
+  letter-spacing: -0.02em; /* tracking-tight */
+  color: #111827; /* text-gray-900 */
 }
 
-.complaint-image {
-  width: 150px; /* Adjust width as needed */
-  height: 170px; /* Adjust height as needed */
-  object-fit: cover; /* Maintain aspect ratio and fill the specified dimensions */
-  border-radius: 8px; /* Optional: Rounded corners for image */
-  margin-left: 20px; /* Space between image and text/content */
+.subtext {
+  margin-top: 1rem;
+  font-size: 1.125rem; /* text-lg */
+  color: #4b5563; /* text-gray-600 */
 }
+
