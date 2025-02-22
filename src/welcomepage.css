@@ -73,11 +73,11 @@ input[type="text"] {
   bottom: 2px;
   left: 2px;
   cursor: pointer;
-  color: #000;  /* Adjust color as needed */
+  color: rgba(255, 0, 0, 0.8) !important;  /* Adjust color as needed */
 }
 
 .location-icon:hover {
-  color: #007bff;  /* Optional: Change color on hover */
+  color: red !important;   /* Optional: Change color on hover */
 }
 
 .location-icon {
