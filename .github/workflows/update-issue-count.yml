@@ -35,7 +35,7 @@ jobs:
       - name: Create JSON File
         run: |
              echo '{ "schemaVersion": 1, "label": "Total Issues", "message": "'$TOTAL_ISSUE_COUNT'", "color": "red" , "updated": "'$(date)'" }' > issue-count.json
-
+             cat issue-count.json 
       - name: Commit and push changes
         run: |
             git add issue-count.json
@@ -54,5 +54,10 @@ jobs:
       - name: Debug GitHub Repository Variable
         run: |
           echo "GitHub Repository: ${{ github.repository }}"
+      - name: Debug Issue Count
+        run: |
+          echo "OPEN_ISSUES=$(gh issue list --repo ${{ github.repository }} --state open --json number --jq 'length')"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
    
