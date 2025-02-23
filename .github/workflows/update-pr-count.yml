@@ -10,6 +10,9 @@ on:
 
 jobs:
   update_pr_count:
+    permissions:
+      contents: write
+      pull-requests: read 
     runs-on: ubuntu-latest
 
     steps:
@@ -33,11 +36,19 @@ jobs:
         run: |
           echo '{ "schemaVersion": 1, "label": "Total PRs", "message": "'$TOTAL_PR_COUNT'", "color": "blue" }' > pr-count.json
 
-      - name: Commit and Push Changes
+      - name: Commit and push changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add pr-count.json
-          git commit -m "Updated PR count"
-          git push
-        continue-on-error: true  # Prevent errors if no changes are made
+            git add pr-count.json
+            if git diff --cached --quiet; then
+              echo "No changes to commit"
+              exit 0
+            fi
+            git commit -m "Update PR count"
+            git push
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Debug JSON File
+        run: cat pr-count.json
+          
+      
+        
