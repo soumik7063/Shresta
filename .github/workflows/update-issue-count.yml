@@ -1,0 +1,52 @@
+name: Update Issue Count
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  update_issue_count:
+    permissions:
+      contents: write
+      issues: read 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Get Open Issues Count
+        run: echo "OPEN_ISSUE_COUNT=$(gh issue list --repo sailaja-adapa/Shresta  --state open --json number --jq 'length')" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get Closed Issues Count
+        run: echo "CLOSED_ISSUE_COUNT=$(gh issue list --repo sailaja-adapa/Shresta --state closed --json number --jq 'length')" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Calculate Total Issues
+        run: echo "TOTAL_ISSUE_COUNT=$(( $OPEN_ISSUE_COUNT + $CLOSED_ISSUE_COUNT ))" >> $GITHUB_ENV
+
+      - name: Create JSON File
+        run: |
+          echo '{ "schemaVersion": 1, "label": "Total Issues", "message": "'$TOTAL_ISSUE_COUNT'", "color": "red" }' > issue-count.json
+
+      - name: Commit and push changes
+        run: |
+            git add issue-count.json
+            if git diff --cached --quiet; then
+              echo "No changes to commit"
+              exit 0
+            fi
+            git commit -m "Update Issue count"
+            git push
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Debug JSON File
+        run: cat issue-count.json
