@@ -32,18 +32,17 @@ jobs:
       - name: Calculate Total PRs
         run: echo "TOTAL_PR_COUNT=$(( $OPEN_PR_COUNT + $CLOSED_PR_COUNT ))" >> $GITHUB_ENV
 
+      # - name: Create JSON File
+      #   run: |
+      #     echo '{ "schemaVersion": 1, "label": "Total PRs", "message": "'$TOTAL_PR_COUNT'", "color": "blue" }' > pr-count.json
       - name: Create JSON File
         run: |
-          echo '{ "schemaVersion": 1, "label": "Total PRs", "message": "'$TOTAL_PR_COUNT'", "color": "blue" }' > pr-count.json
+            echo '{ "schemaVersion": 1, "label": "Total PRs", "message": "'$TOTAL_PR_COUNT'", "color": "blue", "updated": "'$(date)'" }' > pr-count.json
 
       - name: Commit and push changes
         run: |
             git add pr-count.json
-            if git diff --cached --quiet; then
-              echo "No changes to commit"
-              exit 0
-            fi
-            git commit -m "Update PR count"
+            git commit -m "Update PR count" || echo "No changes to commit"
             git push
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
