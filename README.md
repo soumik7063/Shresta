@@ -18,17 +18,15 @@
         <td><strong>🌟 Stars</strong></td>
         <td><strong>🍴 Forks</strong></td>
         <td><strong>🐛 Issues</strong></td>
-        <td><strong>🔔 Open PRs</strong></td>
-        <td><strong>🔕 Closed PRs</strong></td>
+        <td><strong>🔔 Pull Requests</strong></td>
+        <!-- <td><strong>🔕 Closed PRs</strong></td> -->
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a href="https://github.com/sailaja-adapa/Shresta/stargazers" target="_blank"><img alt="Stars" src="https://img.shields.io/github/stars/sailaja-adapa/Shresta?style=for-the-badge&logo=github"/></a></td>
         <td><a href="https://github.com/sailaja-adapa/Shresta/forks" target="_blank"><img alt="Forks" src="https://img.shields.io/github/forks/sailaja-adapa/Shresta?style=for-the-badge&logo=git&logoColor=white"/></a></td>
-        <td><a href="https://github.com/sailaja-adapa/Shresta/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/sailaja-adapa/Shresta?style=for-the-badge&logo=target&color=red"/></a></td>
-        <td><a href="https://github.com/sailaja-adapa/Shresta/pulls?q=is%3Aopen+is%3Apr" target="_blank"><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/sailaja-adapa/Shresta?style=for-the-badge&logo=github&color=green"/></a></td>
-        <td><a href="https://github.com/sailaja-adapa/Shresta/pulls?q=is%3Apr+is%3Aclosed" target="_blank"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/sailaja-adapa/Shresta?style=for-the-badge&color=green&logo=github"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/sailaja-adapa/Shresta?style=for-the-badge&logo=target&color=red"/></a></td>     
       </tr>
     </tbody>
   </table>
