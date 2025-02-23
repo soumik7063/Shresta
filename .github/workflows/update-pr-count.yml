@@ -19,6 +19,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Configure Git User
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+
       - name: Get Open PR Count
         run: echo "OPEN_PR_COUNT=$(gh pr list --repo sailaja-adapa/Shresta --state open --json number --jq 'length')" >> $GITHUB_ENV
         env:
