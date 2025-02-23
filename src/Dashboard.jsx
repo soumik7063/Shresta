@@ -10,7 +10,6 @@ const Dashboard = () => {
 
   return (
     <div className="main-dashboard min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 pt-16">
-      <div className="dashboard-grid-background w-full h-screen"></div>
       <div className="relative p-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
