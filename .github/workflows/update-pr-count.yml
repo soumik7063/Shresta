@@ -49,6 +49,12 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Debug JSON File
         run: cat pr-count.json
+      - name: Debug Variables
+        run: |
+          echo "OPEN_PR_COUNT: $OPEN_PR_COUNT"
+          echo "CLOSED_PR_COUNT: $CLOSED_PR_COUNT"
+          echo "TOTAL_PR_COUNT: $TOTAL_PR_COUNT"
+   
           
       
         
