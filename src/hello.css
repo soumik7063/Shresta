@@ -167,10 +167,9 @@ input::placeholder, textarea::placeholder {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 15px;
-    gap: 20px;
+    padding: 10px;
+    gap: 10px;
     height: calc(100vh - 56px); /* Adjust for potentially smaller mobile navbar */
-    margin-top: 56px; /* Adjust for potentially smaller mobile navbar */
   }
 
   .store-image-text-firebase img {
@@ -178,6 +177,7 @@ input::placeholder, textarea::placeholder {
     width: 80%; /* Adjusts for smaller screens */
     max-width: 300px;
     height: auto;
+    margin-top: 30rem;
   }
 
   .container {
@@ -191,4 +191,88 @@ input::placeholder, textarea::placeholder {
   .add-button{
     margin-top: 20px;
   }
+}
+@media screen and (max-width: 470px) {
+  .store-image-text-firebase {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    gap: 20px;
+    height: calc(100vh - 56px); /* Adjust for potentially smaller mobile navbar */
+  }
+
+  .store-image-text-firebase img {
+    margin-top: 80%;
+    width: 80%; /* Adjusts for smaller screens */
+    max-width: 300px;
+    height: auto;
+    margin-top: 30rem;
+  }
+
+  .container {
+    width: 95%;
+    max-width: 450px; /* Increased for better spacing */
+    margin-left: 0;
+    padding: 10px;
+    height:100%;
+  }
+
+ 
+}
+@media screen and (max-width: 340px) {
+  .store-image-text-firebase {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    gap: 10px;
+    height: calc(100vh - 56px); /* Adjust for potentially smaller mobile navbar */
+  }
+
+  .store-image-text-firebase img {
+    margin-top: 80%;
+    width: 80%; /* Adjusts for smaller screens */
+    max-width: 300px;
+    height: auto;
+    margin-top: 30rem;
+
+  }
+
+  .container {
+    width: 100%;
+    max-width: 600px;/*  Increased for better spacing */
+    margin-left: 0;
+    padding: 10px;
+    height:100%;
+  }
+
+}
+@media screen and (max-width: 265px) {
+  .store-image-text-firebase {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 5px; */
+    gap: 10px;
+    height: 100vh; /* Adjust for potentially smaller mobile navbar */
+  }
+
+  .store-image-text-firebase img {
+    margin-top: 80%;
+    width: 80%; /* Adjusts for smaller screens */
+    max-width: 300px;
+    height: auto;
+    margin-top: 30rem;
+
+  }
+
+  .container {
+    width: 100%;
+    max-width: 600px;/*  Increased for better spacing */
+    margin-left: 0;
+    padding: 5px;
+    height:100%;
+  }
+
 }
