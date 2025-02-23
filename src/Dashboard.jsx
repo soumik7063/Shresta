@@ -9,8 +9,8 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 pt-16">
-      <div class="dashboard-grid-background w-full h-screen"></div>
+    <div className="main-dashboard min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 pt-16">
+      <div className="dashboard-grid-background w-full h-screen"></div>
       <div className="relative p-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,9 +25,6 @@ const Dashboard = () => {
             <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-900">
               Hello Officer 👋
             </h1>
-            <p className="mt-4 text-lg text-gray-600">
-              Manage and monitor your system from one central location
-            </p>
           </div>
 
           <div className="p-8 bg-white backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
