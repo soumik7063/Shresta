@@ -170,7 +170,6 @@ input::placeholder, textarea::placeholder {
     padding: 10px;
     gap: 10px;
     height: calc(100vh - 56px); /* Adjust for potentially smaller mobile navbar */
-    margin-top: 56px; /* Adjust for potentially smaller mobile navbar */
   }
 
   .store-image-text-firebase img {
@@ -178,6 +177,7 @@ input::placeholder, textarea::placeholder {
     width: 80%; /* Adjusts for smaller screens */
     max-width: 300px;
     height: auto;
+    margin-top: 30rem;
   }
 
   .container {
@@ -200,7 +200,6 @@ input::placeholder, textarea::placeholder {
     padding: 15px;
     gap: 20px;
     height: calc(100vh - 56px); /* Adjust for potentially smaller mobile navbar */
-    margin-top: 56px; /* Adjust for potentially smaller mobile navbar */
   }
 
   .store-image-text-firebase img {
@@ -208,6 +207,7 @@ input::placeholder, textarea::placeholder {
     width: 80%; /* Adjusts for smaller screens */
     max-width: 300px;
     height: auto;
+    margin-top: 30rem;
   }
 
   .container {
@@ -228,7 +228,6 @@ input::placeholder, textarea::placeholder {
     padding: 5px;
     gap: 10px;
     height: calc(100vh - 56px); /* Adjust for potentially smaller mobile navbar */
-    margin-top: 56px; /* Adjust for potentially smaller mobile navbar */
   }
 
   .store-image-text-firebase img {
@@ -236,6 +235,8 @@ input::placeholder, textarea::placeholder {
     width: 80%; /* Adjusts for smaller screens */
     max-width: 300px;
     height: auto;
+    margin-top: 30rem;
+
   }
 
   .container {
@@ -255,7 +256,6 @@ input::placeholder, textarea::placeholder {
     /* padding: 5px; */
     gap: 10px;
     height: 100vh; /* Adjust for potentially smaller mobile navbar */
-    margin-top: 56px; /* Adjust for potentially smaller mobile navbar */
   }
 
   .store-image-text-firebase img {
@@ -263,6 +263,8 @@ input::placeholder, textarea::placeholder {
     width: 80%; /* Adjusts for smaller screens */
     max-width: 300px;
     height: auto;
+    margin-top: 30rem;
+
   }
 
   .container {

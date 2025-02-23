@@ -1,0 +1,69 @@
+name: Update Issue Count
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  update_issue_count:
+    permissions:
+      contents: write
+      issues: read 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Configure Git User
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+      
+
+      - name: Get Open Issues Count
+        run: echo "OPEN_ISSUE_COUNT=$(gh issue list --repo sailaja-adapa/Shresta  --state open --json number --jq 'length')" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get Closed Issues Count
+        run: echo "CLOSED_ISSUE_COUNT=$(gh issue list --repo sailaja-adapa/Shresta --state closed --json number --jq 'length')" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Calculate Total Issues
+        run: echo "TOTAL_ISSUE_COUNT=$(( $OPEN_ISSUE_COUNT + $CLOSED_ISSUE_COUNT ))" >> $GITHUB_ENV
+
+      - name: Create JSON File
+        run: |
+             echo '{ "schemaVersion": 1, "label": "Total Issues", "message": "'$TOTAL_ISSUE_COUNT'", "color": "red" , "updated": "'$(date)'" }' > issue-count.json
+             cat issue-count.json 
+      - name: Commit and push changes
+        run: |
+            git add issue-count.json
+            git commit -m "Update issue count" || echo "No changes to commit"
+            git push
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Debug JSON File
+        run: cat issue-count.json
+      - name: Debug Variables
+        run: |
+          echo "OPEN_PR_COUNT: $OPEN_PR_COUNT"
+          echo "CLOSED_PR_COUNT: $CLOSED_PR_COUNT"
+          echo "TOTAL_PR_COUNT: $TOTAL_PR_COUNT"
+      - name: Debug GitHub Repository Variable
+        run: |
+          echo "GitHub Repository: ${{ github.repository }}"
+      - name: Debug Issue Count
+        run: |
+          echo "OPEN_ISSUES=$(gh issue list --repo ${{ github.repository }} --state open --json number --jq 'length')"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+   
