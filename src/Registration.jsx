@@ -78,7 +78,7 @@ const Registration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Simple email validation
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
@@ -100,7 +100,18 @@ const Registration = () => {
   return (
     <div className="registration-container">
       <div className="container-with-image">
-        <div className="image-side"></div>
+        <div className='image-box'>
+          <img src="https://static.vecteezy.com/system/resources/previews/003/689/228/non_2x/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg" className="image-side" />
+          <div className='img-btn-box'>
+            <button type="submit" className='registration-button mb-2'>Register</button>
+            <p className='text-center'>
+              Already have an account?{' '}
+              <span className="login-link" onClick={handleLogin}>
+                Login
+              </span>
+            </p>
+          </div>
+        </div>
         <div className="form-side">
           <div className="form-wrapper">
             <form className="registration-form" onSubmit={handleSubmit}>
@@ -130,31 +141,31 @@ const Registration = () => {
               <div className='form-group'>
                 <label>Last Name</label>
                 <input
-                type="text"
-                placeholder="Last Name"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                required
+                  type="text"
+                  placeholder="Last Name"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  required
                 />
               </div>
-              
+
               <div className='form-group'>
                 <label>Username</label>
                 <input
-                type="text"
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                required
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
                 />
               </div>
 
               <div className='form-group'>
                 <label>Gender</label>
                 <select
-                value={gender}
-                onChange={(e) => setGender(e.target.value)}
-                required
+                  value={gender}
+                  onChange={(e) => setGender(e.target.value)}
+                  required
                 >
                   <option value="">Select Gender</option>
                   <option value="Male">Male</option>
@@ -165,9 +176,9 @@ const Registration = () => {
               <div className='form-group'>
                 <label>State</label>
                 <select
-                value={state}
-                onChange={(e) => setState(e.target.value)}
-                required
+                  value={state}
+                  onChange={(e) => setState(e.target.value)}
+                  required
                 >
                   <option value="">Select State</option>
                   {statesList.map((stateOption, index) => (
@@ -181,16 +192,16 @@ const Registration = () => {
               <div className='form-group'>
                 <label>Phone Number</label>
                 <input
-                type="text"
-                placeholder="Phone Number"
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                required
+                  type="text"
+                  placeholder="Phone Number"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  required
                 />
               </div>
 
               <div className='form-group'>
-                <label>Email <span><MdEmail className='icon'/></span> </label>
+                <label>Email <span><MdEmail className='icon' /></span> </label>
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -223,7 +234,7 @@ const Registration = () => {
               </div>
 
               <div className='form-group'>
-                <label>Password <span><RiLockPasswordFill className='icon'/></span></label>
+                <label>Password <span><RiLockPasswordFill className='icon' /></span></label>
                 <div className="password-input-container">
                   <input
                     type={showPassword ? 'text' : 'password'} // Toggle input type
@@ -253,15 +264,13 @@ const Registration = () => {
                 />
               </div>
 
-              <button type="submit">Register</button>
-
-              <p>
+              <button type="submit" className='registration-button mb-2' style={{ width: "100%" }}>Register</button>
+              <p className='text-center'>
                 Already have an account?{' '}
                 <span className="login-link" onClick={handleLogin}>
                   Login
                 </span>
               </p>
-
             </form>
           </div>
         </div>
