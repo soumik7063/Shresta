@@ -54,7 +54,7 @@ export const GeneralDetailsPage = () => {
       return;
     }
     const details = {
-      firstName, lastName, username, email, password
+      FirstName: firstName, LastName: lastName, FullName: `${firstName} ${lastName}`, Username: username, Email: email, Password: password, ConfirmPassword: confirmPassword
     }
 
     navigate(`/register/additional-details?data=${encodeURI(JSON.stringify(details))}`);
@@ -171,7 +171,8 @@ export const AdditionalDetailsPage = () => {
 
   const dbref = collection(db2, "Auth");
   const signup = async () => {
-    const matchEmail = query(dbref, where('Email', '==', data?.email));
+    if (!data) return;
+    const matchEmail = query(dbref, where('Email', '==', data?.Email));
     try {
       const snapshot = await getDocs(matchEmail);
       const emailMatchingArray = snapshot.docs.map((doc) => doc.data());
@@ -187,7 +188,6 @@ export const AdditionalDetailsPage = () => {
           PhoneNumber: phoneNumber,
           AdharNumber: adhar,
           Country: country,
-          ConfirmPassword: data?.password
         });
         toast.success('Registration Successful! 😊', {
           position: 'top-center'
