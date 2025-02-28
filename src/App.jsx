@@ -20,6 +20,7 @@ import Complaints from './Complaints';
 import ComplaintsPage from './Complaintspage';
 import { toast } from 'react-toastify';
 import Navbar from './Navbar';
+import NotFound from "./NotFound.js";
 const App = () => {
   return (
     <>
@@ -47,6 +48,8 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/complaints" element={<Complaints />} />
         <Route path="/ComplaintsPage" element={<ComplaintsPage />} />
+        {/* Catch-all route for 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

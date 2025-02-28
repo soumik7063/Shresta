@@ -293,8 +293,3 @@ body {
   bottom: 0px;
 }
 
-.d-inline {
-  display: flex;
-  gap: 0.5em;
-  align-items: center;
-}
