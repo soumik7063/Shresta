@@ -65,7 +65,7 @@ const Forpas = () => {
     >
       <Card
         sx={{
-          width: { xs: "95%", sm: "85%", md: "800px" },
+          width: { xs: "95%", sm: "85%", md: "1080px" },
           height: { xs: "auto", md: "500px" }, // Maintained proper height
           boxShadow: 3,
           borderRadius: 2,
@@ -89,8 +89,9 @@ const Forpas = () => {
             src={image}
             alt="Forgot Password"
             style={{
-              width: { xs: "50%", md: "80%" },
-              height: { xs: "50%", md: "80%" },
+              width: "60vw",
+              margin: "auto",
+              height: { xs: "100%", md: "80%" },
               objectFit: "cover",
               borderRadius: { xs: "12px 12px 0 0", md: "0 0 0 0" },
             }}
@@ -100,7 +101,7 @@ const Forpas = () => {
         {/* Right Side - Form */}
         <Grid item xs={12} md={6} sx={{ display: "flex", flex: 1, alignItems: "center", justifyContent: "center" }}>
           <CardContent sx={{ width: "100%", padding: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2, textAlign: "center", color: "#0051ff" }}>
+            <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2, textAlign: "center", color: "#0051ff", fontSize: "2rem" }}>
               Forgot Password
             </Typography>
             <Typography variant="body1" sx={{ mb: 3, textAlign: "center", color: "#333", fontWeight: "bold" }}>
