@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
-import firebase from './firebase'; // Import firebase initialization
-import { useNavigate } from 'react-router-dom';
-import './Forpas.css';
-import image from './forpas.jpg';
-import background from './forgot.jpg';
+import React, { useState } from "react";
+import firebase from "./firebase"; // Import Firebase initialization
+import { useNavigate } from "react-router-dom";
+import { 
+  Box, 
+  Card, 
+  CardContent, 
+  TextField, 
+  Button, 
+  Typography, 
+  Grid 
+} from "@mui/material";
+import background from "./forgot.jpg";
+import image from "./forpas.jpg";
 
 const Forpas = () => {
   const [username, setUsername] = useState('');
@@ -43,43 +51,158 @@ const Forpas = () => {
   };
 
   return (
-    <div className="forgot-password-container">
-      <div className="forgot-password-form-wrapper">
-        <img src={image} alt="Forgot Password" />
-        <form className="forgot-password-form">
-          <h2>Forgot Password</h2>
-          <p>Please enter your details to reset your password.</p>
-          <input
-            type="text"
-            placeholder="Username"
-            name="username"
-            value={username}
-            onChange={handleChange}
-            className="forgot-password-input"
-            required
+    <Box
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        padding: 2,
+      }}
+    >
+      <Card
+        sx={{
+          width: { xs: "95%", sm: "85%", md: "1080px" },
+          height: { xs: "auto", md: "500px" }, // Maintained proper height
+          boxShadow: 3,
+          borderRadius: 2,
+          overflow: "hidden",
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" }, // Adjust layout for responsiveness
+        }}
+      >
+        {/* Left Side - Image */}
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            display: "flex",
+            flex: 1,
+            height: { xs: "20vh", md: "100%" }, // Decreased height for small screens
+          }}
+        >
+          <img
+            src={image}
+            alt="Forgot Password"
+            style={{
+              width: "60vw",
+              margin: "auto",
+              height: { xs: "100%", md: "80%" },
+              objectFit: "cover",
+              borderRadius: { xs: "12px 12px 0 0", md: "0 0 0 0" },
+            }}
           />
-          <br/><br/>
-          <input
-            type="text"
-            placeholder="Phone Number"
-            name="phone"
-            value={phone}
-            onChange={handleChange}
-            className="forgot-password-input"
-            required
-          />
-          <br/><br/>
-          <button
-            type="button"
-            onClick={handleSendOtp}
-            className="send-otp-button"
-          >
-            Send OTP
-          </button>
-        </form>
-      </div>
+        </Grid>
+
+        {/* Right Side - Form */}
+        <Grid item xs={12} md={6} sx={{ display: "flex", flex: 1, alignItems: "center", justifyContent: "center" }}>
+          <CardContent sx={{ width: "100%", padding: 4 }}>
+            <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2, textAlign: "center", color: "#0051ff", fontSize: "2rem" }}>
+              Forgot Password
+            </Typography>
+            <Typography variant="body1" sx={{ mb: 3, textAlign: "center", color: "#333", fontWeight: "bold" }}>
+              Please enter your details to reset your password.
+            </Typography>
+
+            <TextField
+              fullWidth
+              variant="outlined"
+              label="Username"
+              name="username"
+              value={username}
+              onChange={handleChange}
+              InputProps={{
+                sx: {
+                  color: "black !important", // ✅ Ensures text inside input is black
+                  backgroundColor: "white", // ✅ White background
+                  border: "none !important",
+                  fontSize: "1.2rem", // ✅ Bigger text
+                  height: "50px", // ✅ Ensures correct height
+                  display: "flex",
+                  alignItems: "center", // ✅ Centers text vertically
+                },
+              }}
+              sx={{
+                marginBottom: "20px",
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { border: "2px solid #007bff" }, // ✅ Custom border
+                  "&:hover fieldset": { border: "2px solid #0056b3" },
+                  "&.Mui-focused fieldset": { border: "2px solid #0056b3" },
+                  height: "50px", // ✅ Make input height match
+                },
+                "& .MuiInputBase-input": {
+                  paddingTop: "1.5rem", // ✅ Adjusts vertical alignment
+                  fontSize: "1.5rem", // ✅ Ensures large text
+                  color: "black !important", // ✅ Ensures text remains black
+                  border: "none !important",
+                },
+              }}
+            />
+
+            <TextField
+              fullWidth
+              variant="outlined"
+              label="Phone Number"
+              name="phone"
+              value={phone}
+              onChange={handleChange}
+              InputProps={{
+                sx: {
+                  color: "black !important", // ✅ Ensures text inside input is black
+                  backgroundColor: "white", // ✅ White background
+                  border: "none !important",
+                  fontSize: "1.2rem", // ✅ Bigger text
+                  height: "50px", // ✅ Ensures correct height
+                  display: "flex",
+                  alignItems: "center", // ✅ Centers text vertically
+                },
+              }}
+              sx={{
+                marginBottom: "20px",
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { border: "2px solid #007bff" }, // ✅ Custom border
+                  "&:hover fieldset": { border: "2px solid #0056b3" },
+                  "&.Mui-focused fieldset": { border: "2px solid #0056b3" },
+                  height: "50px", // ✅ Make input height match
+                },
+                "& .MuiInputBase-input": {
+                  paddingTop: "1.5rem", // ✅ Adjusts vertical alignment
+                  fontSize: "1.5rem", // ✅ Ensures large text
+                  color: "black !important", // ✅ Ensures text remains black
+                  border: "none !important",
+                },
+              }}
+            />
+
+            <Button
+              fullWidth
+              variant="contained"
+              sx={{
+                backgroundColor: "#ff4b2b",
+                color: "white",
+                fontSize: "16px",
+                fontWeight: "bold",
+                padding: "10px",
+                transition: "background 0.3s ease-in-out, transform 0.2s",
+                "&:hover": {
+                  backgroundColor: "#ff3a1b",
+                  transform: "scale(1.05)",
+                },
+              }}
+              onClick={handleSendOtp}
+            >
+              Send OTP
+            </Button>
+          </CardContent>
+        </Grid>
+      </Card>
+
       <div id="sign-in-button"></div> {/* RecaptchaVerifier container */}
-    </div>
+    </Box>
   );
 };
 
