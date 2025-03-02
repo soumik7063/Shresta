@@ -7,9 +7,11 @@ const Contact = () => {
     <Box
       sx={{
         minHeight: "100vh",
-        backgroundImage: "url('https://source.unsplash.com/random/1600x900?nature')",
+        backgroundImage: "url('https://media.istockphoto.com/id/2160041157/photo/website-page-contact-us-or-e-mail-marketing-concept-customer-support-hotline-contact-us.webp?a=1&b=1&s=612x612&w=0&k=20&c=vjlD9d6TgqTnp7vYpkMmfSWYUbtNq9FjPa9fYbkmimM=')",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -62,7 +64,7 @@ const Contact = () => {
               variant="contained"
               sx={{ backgroundColor: "#0077b5", color: "white", width: "250px" }}
               startIcon={<FaLinkedin />}
-              href="https://www.linkedin.com/in/akshaya-adapa-770167291"
+              href="https://www.linkedin.com/in/sailaja-adapa-770167291/"
               target="_blank"
             >
               LinkedIn
