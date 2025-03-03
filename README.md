@@ -7,7 +7,7 @@
 <div align="center">
   <img src="https://forthebadge.com/images/badges/built-with-love.svg" />&nbsp;
   <img src="https://forthebadge.com/images/badges/uses-brains.svg" />&nbsp;
-  <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+  <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg"/>
 </div>
 <br>
 
@@ -18,17 +18,15 @@
         <td><strong>🌟 Stars</strong></td>
         <td><strong>🍴 Forks</strong></td>
         <td><strong>🐛 Issues</strong></td>
-        <td><strong>🔔 Open PRs</strong></td>
-        <td><strong>🔕 Closed PRs</strong></td>
+        <td><strong>🔔 Pull Requests</strong></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/stargazers" target="_blank"><img alt="Stars" src="https://img.shields.io/github/stars/your-username/Shresta-City-Insight?style=for-the-badge&logo=github"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/forks" target="_blank"><img alt="Forks" src="https://img.shields.io/github/forks/your-username/Shresta-City-Insight?style=for-the-badge&logo=git&logoColor=white"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/your-username/Shresta-City-Insight?style=for-the-badge&logo=target&color=red"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/pulls?q=is%3Aopen+is%3Apr" target="_blank"><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/your-username/Shresta-City-Insight?style=for-the-badge&logo=github&color=green"/></a></td>
-        <td><a href="https://github.com/your-username/Shresta-City-Insight/pulls?q=is%3Apr+is%3Aclosed" target="_blank"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/your-username/Shresta-City-Insight?style=for-the-badge&color=green&logo=github"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/stargazers" target="_blank"><img alt="Stars" src="https://img.shields.io/github/stars/sailaja-adapa/Shresta?style=for-the-badge&logo=github"/></a></td>
+        <td><a href="https://github.com/sailaja-adapa/Shresta/forks" target="_blank"><img alt="Forks" src="https://img.shields.io/github/forks/sailaja-adapa/Shresta?style=for-the-badge&logo=git&logoColor=white"/></a></td>
+        <td><img alt="Total Issues" src="https://img.shields.io/github/issues-search/sailaja-adapa/Shresta?query=is:issue&style=for-the-badge&label=Issues&logo=github&color=blue"/></td>
+        <td><img alt="Total PRs" src="https://img.shields.io/github/issues-search/sailaja-adapa/Shresta?query=is:pr&style=for-the-badge&label=Pull%20Requests&logo=github&color=blue"/></td>
       </tr>
     </tbody>
   </table>
@@ -58,39 +56,32 @@ Check out the live demo of the platform [Shresta City Insight](https://shresta.v
 ### How to Set Up
 
 To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js** and **npm** installed on your machine 💻.
-1) To check this , you can type **node -v** and **npm -v** in terminal .
 
-2) Then, **fork** the repo🍴 by clicking at the fork button on github and give it a name
-3) **clone** it to your local machine using:
+1) To check this, you can type **node -v** and **npm -v** in the terminal.
+2) **Fork** the repo 🍴 by clicking the fork button on GitHub and give it a name.
+3) **Clone** it to your local machine using:
 
+    ```sh
+    git clone https://github.com/yourusername/projectname.git
+    ```
 
-    > git clone https://github.com/yourusername/projectname.git
+4) **Navigate** to the project directory:
 
-
-      projectname is the name given in step 2.
-  
-
-4) Next, **navigate** to the project directory by typing these in the terminal of VS Code📂:
-
-
-    >cd ~ 
-
-
-    >**cd projectname**
-
-
-    >ex: cd Shresta-city-insight
-
+    ```sh
+    cd projectname  # Example: cd Shresta-city-insight
+    ```
 
 5) **Install** the dependencies 🔧:
 
+    ```sh
+    npm install  
+    ```
 
-    >**npm install**  
+6) Start the local server 🌍:
 
-6) Finally, start the local server to run the project locally 🌍:
-
-
-    >**npm start**
+    ```sh
+    npm start
+    ```
 
     This will launch the development server at:
     👉 **http://localhost:3000/** 🖥️
@@ -117,6 +108,32 @@ To get started with **Shresta-City Insight** 🚀, make sure you have **Node.js*
 - **OTP Authentication** using Firebase for secure user verification.
 - **Real-time Notifications** via SMS using Twilio.
 - **Scalable Infrastructure** with Firebase services.
+
+## Workflow
+
+  + **Citizen Workflow 👩‍🦰:**
+    - The user is required to register using their Google email ID (@gmail.com) for authentication and must provide the required details.📩
+    - The user logs in using registered email Id and password.🔐
+    - The user provides their location manually or allows it to be retrieved via an API. 📍
+    - An OTP is sent to their registered mobile number for verification, which must be entered to proceed. 🔢
+      <br>  
+      ![OTP message](OTP_msg.png)
+      <br>  
+    
+    - Upon successful verification, the user is redirected to the Complaint Submission Portal where they can report civic issues by uploading relevant images or documents. 📸📁
+    - Alternatively, users can utilize voice input to lodge a complaint, which is transcribed into text via a Speech-to-Text API. 🎙️🗣️
+    - After submitting the complaint, the user is navigated to the Thank you Page, where they have the option to provide feedback on their experience. ✍️
+    
+  + **Officer Registration & Complaint Management Process 👮‍♂️📋**
+    
+
+    - Officers are required to register using an official email ID with the "@svecw.edu.in" domain, as this domain is exclusively designated for authorized personnel. ✉️✅
+    - Upon successful login, officers gain access to the Complaint Management Dashboard, where they can review all submitted complaints along with their corresponding images. 🖥️📸
+    - When an officer marks a complaint as resolved and selects the delete option, an automated notification is sent to the complainant via Twilio, informing them of the resolution. 📩🔔
+      <br>  
+      ![Issue Resolved message](Resolved_message.png) 
+      <br>  
+    
 
 
 ## Our Goals 🎯

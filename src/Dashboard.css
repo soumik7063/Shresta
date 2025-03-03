@@ -4,15 +4,8 @@ body, html {
   font-family: Arial, sans-serif; /* Optional: For better typography */
 }
 
-.dashboard-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Full viewport height */
-  background: url('https://w0.peakpx.com/wallpaper/648/370/HD-wallpaper-welcome-autumn-digital-art-background-fall-autumn-leaves-leaf.jpg') no-repeat center center fixed; /* Background image */
-  background-size: cover; /* Ensure the background image covers the whole page */
-}
 
+<<<<<<< HEAD
 .content-container {
   display: flex;
   align-items: center;
@@ -58,3 +51,8 @@ body, html {
   border-radius: 8px; /* Optional: Rounded corners for image */
   margin-left: 20px; /* Space between image and text/content */
 }
+=======
+.main-dashboard {
+  background: url("./dashboard2.jpg") no-repeat center center/cover;
+}
+>>>>>>> 8cf1c36d4c522542bc3b718d1eb1380d03d0e72d

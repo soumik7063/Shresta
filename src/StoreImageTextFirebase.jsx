@@ -85,7 +85,8 @@ function StoreImageTextFirebase() {
   }
 
   return (
-    <div className="store-image-text-firebase" style={{ backgroundImage: `url(${background})` }}>
+    <div className="store-image-text-firebase">
+      <img src={background}/>
       <div className="container">
         <h1>Register Complaint here</h1>
         <div>
@@ -101,14 +102,14 @@ function StoreImageTextFirebase() {
           onChange={(e) => handleUpload(e)}
           className="file-input"
           multiple
-        /><br /><br />
+        /><br />
 
         <div className="textarea-container">
           <textarea
             id="complaint"
             value={text + interimText}
             onChange={(e) => setText(e.target.value)} // Allow text modification
-            placeholder="Enter your Complaint.... ^_^"
+            placeholder="Enter your Complaint...."
             className="textarea"
           />
         </div>
@@ -132,7 +133,7 @@ function StoreImageTextFirebase() {
           </button>
         </div>
         
-        {message && <p>{message}</p>}
+        {message && <p className="message">{message}</p>}
 
         {/* New input for phone number */}
         <div className="phone-number-container">

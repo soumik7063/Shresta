@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
       setIsNav((prev) => !prev); // Correct toggle function
     }
   return (
+<<<<<<< HEAD
     <div className="app-container">
       <button classname="toggle-btn" onClick={toggle}><IoReorderThreeSharp /></button>
       <div className="top-right-buttons">
@@ -28,6 +29,10 @@ const Layout = ({ children }) => {
         <Link to="/register" className="register-button">Register</Link>
         <Link to="/aboutus" className="about-us-button">About Us</Link>
       </div>
+=======
+    <div className="app-container" style={{ backgroundImage: `url(${background})` }}>
+      
+>>>>>>> 8cf1c36d4c522542bc3b718d1eb1380d03d0e72d
       <div className="content-container">
         {children} {/* Render page content */}
       </div>
