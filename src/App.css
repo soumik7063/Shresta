@@ -2,7 +2,8 @@
 
 /* Ensure that the background covers the entire viewport */
 .app-container {
-  position: relative;
+  /* background-image: url('./home.avif'); */
+  /* position: relative; */
   min-height: 100vh; /* Use min-height to ensure the container expands with content */
   background-size: cover;
   background-position: center;
@@ -10,7 +11,7 @@
 
 /* Position the buttons in the top-right corner */
 .top-right-buttons {
-  position: absolute;
+  position: relative;
   top: 20px;
   right: 20px;
   display: flex; /* Use flexbox to align buttons horizontally */
@@ -20,26 +21,88 @@
 .top-right-buttons .login-button,
 .top-right-buttons .register-button,
 .top-right-buttons .about-us-button {
-  padding: 10px 20px;
-  margin-left: 10px;
-  background-color: #007bff;
+  width: 6.5em;
+ height: 2.3em;
+ margin: 0.5em;
+ text-align: center;
+ background: rgb(11, 26, 70);
+ color: white;
+ border: none;
+ border-radius: 0.625em;
+ font-size: 20px;
+ font-weight: bold;
+ cursor: pointer;
+ position: relative;
+ z-index: 1;
+ overflow: hidden;
+}
+
+/* hover effect */
+.about-us-button:hover,
+.top-right-buttons .login-button:hover,
+.top-right-buttons .register-button:hover {
+  color: black;
+}
+.about-us-button:after,
+.top-right-buttons .login-button:after,
+.top-right-buttons .register-button:after {
+ content: "";
+ background: white;
+ position: absolute;
+ z-index: -1;
+ left: -20%;
+ right: -20%;
+ top: 0;
+ bottom: 0;
+ transform: skewX(-45deg) scale(0, 1);
+ transition: all 0.5s;
+}
+.about-us-button:hover:after,
+.top-right-buttons .login-button:hover:after,
+.top-right-buttons .register-button:hover:after{
+  transform: skewX(-45deg) scale(1, 1);
+ -webkit-transition: all 0.5s;
+ transition: all 0.5s;
+}
+
+.toggle-btn{
+  border: 2px solid black;
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
+  visibility: hidden;
+}
+.navbar-mobile{
+  position: absolute;
+  top:20;
+  right: 14;
+  width:400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: rgb(11, 26, 70);
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transform: translateY(0);
+  transition:transform 0.3s ease, opacity 0.5s ease;
+  opacity: 0;
 }
 
 /* Adjust spacing for smaller screens */
 @media (max-width: 768px) {
-  .top-right-buttons {
-    top: 10px;
-    right: 10px;
-  }
+  
 
   .top-right-buttons .login-button,
   .top-right-buttons .register-button,
   .top-right-buttons .about-us-button {
-    padding: 8px 16px;
-    margin-left: 8px;
+    display: none;
+  }
+  .toggle-btn{
+    visibility: visible;
+  }
+  .navbar-mobile{
+    opacity: 1;
   }
 }
